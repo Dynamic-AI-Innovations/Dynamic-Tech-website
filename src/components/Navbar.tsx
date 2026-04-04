@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Our Vision", href: "#vision" },
   { label: "Partners", href: "#partners" },
   { label: "Why Us", href: "#why-us" },
+  { label: "Store", href: "https://paystack.shop/dynamics-technology-store", external: true },
 ];
 
 const Navbar = () => {
@@ -36,6 +37,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {link.label}
@@ -68,6 +70,7 @@ const Navbar = () => {
                   <a
                     key={link.label}
                     href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setOpen(false)}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
