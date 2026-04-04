@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -23,13 +24,8 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass-card"
     >
       <div className="section-padding flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-lg">
-            D
-          </div>
-          <div className="font-display font-bold text-lg">
-            Dynamics<span className="text-muted-foreground font-normal ml-1 text-sm">Technology</span>
-          </div>
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Dynamics Technology" className="h-10 md:h-12 w-auto" />
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
