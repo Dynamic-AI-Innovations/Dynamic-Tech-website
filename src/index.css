@@ -37,12 +37,12 @@
     --radius: 0.75rem;
 
     --hero-gradient: linear-gradient(135deg, hsl(220 20% 7%) 0%, hsl(220 25% 12%) 50%, hsl(225 30% 10%) 100%);
-    --glow-primary: 0 0 60px hsl(163 100% 42% / 0.15);
-    --glow-accent: 0 0 60px hsl(38 92% 55% / 0.1);
-    --text-gradient-primary: linear-gradient(135deg, hsl(163 100% 50%), hsl(163 80% 65%));
-    --text-gradient-accent: linear-gradient(135deg, hsl(38 92% 55%), hsl(28 95% 60%));
+    --glow-primary: 0 0 60px hsl(214 72% 37% / 0.2);
+    --glow-accent: 0 0 60px hsl(40 85% 50% / 0.15);
+    --text-gradient-primary: linear-gradient(135deg, hsl(214 72% 45%), hsl(214 60% 60%));
+    --text-gradient-accent: linear-gradient(135deg, hsl(40 85% 50%), hsl(30 90% 55%));
     --surface-glass: hsl(220 18% 10% / 0.6);
-    --border-glow: hsl(163 100% 42% / 0.2);
+    --border-glow: hsl(214 72% 37% / 0.2);
 
     --sidebar-background: 220 18% 10%;
     --sidebar-foreground: 210 20% 85%;
