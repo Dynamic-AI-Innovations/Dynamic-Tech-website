@@ -70,6 +70,7 @@ const Navbar = () => {
                   <a
                     key={link.label}
                     href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setOpen(false)}
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
