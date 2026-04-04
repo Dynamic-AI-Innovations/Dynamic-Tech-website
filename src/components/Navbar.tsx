@@ -37,6 +37,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {link.label}
