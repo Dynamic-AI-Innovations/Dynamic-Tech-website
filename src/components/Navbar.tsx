@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Our Vision", href: "#vision" },
   { label: "Partners", href: "#partners" },
   { label: "Why Us", href: "#why-us" },
+  { label: "Store", href: "https://paystack.shop/dynamics-technology-store", external: true },
 ];
 
 const Navbar = () => {
