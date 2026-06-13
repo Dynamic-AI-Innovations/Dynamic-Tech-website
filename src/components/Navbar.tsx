@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import IdeationModal from "@/components/IdeationModal";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.svg";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -60,7 +60,7 @@ const Navbar = ({ onPortfolioTabSelect }: NavbarProps) => {
       >
         <div className="section-padding flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center">
-            <img src={logo} alt="Dynamics Technology" className="h-10 md:h-12 w-auto" />
+            <img src={logo} alt="Dynamics Technology" className="h-9 md:h-11 w-auto" />
           </a>
 
           {/* Desktop nav */}
