@@ -6,9 +6,18 @@ import IdeationModal from "@/components/IdeationModal";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const pillars = [
-  { num: "01", label: "IDEATE", title: "Innovation Consulting", desc: "Human-centred strategy that turns challenges into validated, investor-ready blueprints." },
-  { num: "02", label: "ENGINEER", title: "Full-Stack Delivery", desc: "Software, AI, IoT, web, mobile & hardware — built to international standards." },
-  { num: "03", label: "TRANSFORM", title: "Strategic Partnership", desc: "Long-term consultancy that drives lasting competitive advantage across Africa." },
+  {
+    num: "01", label: "IDEATE", title: "Innovation Consulting",
+    desc: "We start where most companies stop — with the right problem. Deep research, human insight, and market intelligence shape every idea into a clear, fundable, execution-ready plan.",
+  },
+  {
+    num: "02", label: "ENGINEER", title: "Full-Stack Delivery",
+    desc: "AI, IoT, mobile, web, software & hardware — precision-built for African markets and engineered to stand alongside the world's best. We don't cut corners on quality.",
+  },
+  {
+    num: "03", label: "TRANSFORM", title: "Strategic Partnership",
+    desc: "We don't deliver and disappear. We stay, scale alongside you, and drive continuous growth — because Africa's digital future is a long-term build, and we're here for all of it.",
+  },
 ];
 
 const HeroSection = () => {
