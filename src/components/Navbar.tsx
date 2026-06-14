@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,13 +7,10 @@ import IdeationModal from "@/components/IdeationModal";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Core Service", href: "#core-service" },
-  { label: "Services", href: "#services" },
-  { label: "Our Vision", href: "#vision" },
-  { label: "Partners", href: "#partners" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Store", href: "https://paystack.shop/dynamics-technology-store", external: true },
+  { label: "About",    to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Partners", to: "/partners" },
+  { label: "Store",    to: "https://paystack.shop/dynamics-technology-store", external: true },
 ];
 
 const portfolioItems = [
@@ -22,20 +20,16 @@ const portfolioItems = [
   { label: "Software & Automation",   tab: "tech" },
 ];
 
-interface NavbarProps {
-  onPortfolioTabSelect: (tab: string) => void;
-}
-
-const Navbar = ({ onPortfolioTabSelect }: NavbarProps) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navigate = useNavigate();
 
   const handlePortfolioSelect = (tab: string) => {
-    onPortfolioTabSelect(tab);
-    document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+    navigate(`/portfolio?tab=${tab}`);
     setOpen(false);
     setDropdownOpen(false);
     setMobilePortfolioOpen(false);
@@ -59,22 +53,33 @@ const Navbar = ({ onPortfolioTabSelect }: NavbarProps) => {
         className="fixed top-0 left-0 right-0 z-50 glass-card"
       >
         <div className="section-padding flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Dynamics Technology" className="h-9 md:h-11 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.label}
+                  href={link.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
 
             {/* Portfolios dropdown */}
             <div
@@ -138,17 +143,29 @@ const Navbar = ({ onPortfolioTabSelect }: NavbarProps) => {
               className="lg:hidden overflow-hidden border-t border-border"
             >
               <div className="section-padding py-6 flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    onClick={() => setOpen(false)}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {navLinks.map((link) =>
+                  link.external ? (
+                    <a
+                      key={link.label}
+                      href={link.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      to={link.to}
+                      onClick={() => setOpen(false)}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                )}
 
                 {/* Mobile portfolios accordion */}
                 <div>

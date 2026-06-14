@@ -1,28 +1,69 @@
-import logo from "@/assets/logo.jpg";
-import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Facebook, Twitter, Linkedin, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const socials = [
-  { icon: Instagram, href: "https://www.instagram.com/ddynamicstechnology/", label: "Instagram" },
-  { icon: Facebook, href: "https://www.facebook.com/share/18YqKpy8gp/?mibextid=wwXIfr", label: "Facebook" },
-  { icon: Twitter, href: "https://x.com/ddynamictech?s=21", label: "X" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/dynamics-technology/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/ddynamicstechnology/",                   label: "Instagram" },
+  { icon: Facebook,  href: "https://www.facebook.com/share/18YqKpy8gp/?mibextid=wwXIfr",      label: "Facebook"  },
+  { icon: Twitter,   href: "https://x.com/ddynamictech?s=21",                                  label: "X"         },
+  { icon: Linkedin,  href: "https://www.linkedin.com/company/dynamics-technology/",             label: "LinkedIn"  },
+];
+
+const footerLinks = [
+  { label: "About",      to: "/about"     },
+  { label: "Services",   to: "/services"  },
+  { label: "Portfolio",  to: "/portfolio" },
+  { label: "Partners",   to: "/partners"  },
 ];
 
 const Footer = () => (
   <footer className="section-padding py-12 border-t border-border">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <a href="#" className="flex items-center">
-        <img src={logo} alt="Dynamics Technology" className="h-8 w-auto" />
-      </a>
-      <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Dynamics Technology. All rights reserved.
-      </p>
-      <div className="flex items-center gap-4">
-        {socials.map(({ icon: Icon, href, label }) => (
-          <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-muted-foreground hover:text-primary transition-colors">
-            <Icon className="h-5 w-5" />
+    <div className="max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-10">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Dynamics Technology" className="h-9 w-auto" />
+        </Link>
+
+        <div className="flex flex-wrap gap-6">
+          {footerLinks.map((l) => (
+            <Link
+              key={l.label}
+              to={l.to}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+          <a href="tel:+2349112802448" className="flex items-center gap-2 hover:text-foreground transition-colors">
+            <Phone size={13} /> +234 911 280 2448
           </a>
-        ))}
+          <a href="mailto:ddynamictech@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+            <Mail size={13} /> ddynamictech@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-border">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Dynamics Technology. All rights reserved.
+        </p>
+        <div className="flex items-center gap-4">
+          {socials.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Icon className="h-4 w-4" />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </footer>
