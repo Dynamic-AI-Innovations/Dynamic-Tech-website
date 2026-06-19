@@ -1,5 +1,11 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import imgProfessional from "@/assets/slide-professional.jpeg";
+import imgBuildings    from "@/assets/slide-buildings.jpg";
+import imgAfrica       from "@/assets/slide-africa.webp";
+import imgHero         from "@/assets/hero-bg.jpg";
+import imgServer       from "@/assets/slide-server.jpg";
+import imgBuild        from "@/assets/slide-build.jpg";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -12,12 +18,12 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const steps = [
-  { num: "01", title: "Discover", desc: "Deep understanding of your business model, objectives, and challenges." },
-  { num: "02", title: "Define", desc: "Scope, deliverables, success metrics, and timeline — precisely defined." },
-  { num: "03", title: "Design", desc: "Architecture, UX, and visual design — validated through prototyping." },
-  { num: "04", title: "Develop", desc: "Agile sprints, continuous integration, and iterative refinement." },
-  { num: "05", title: "Deploy", desc: "Testing, performance benchmarking, security validation — then launch." },
-  { num: "06", title: "Evolve", desc: "Ongoing support and continuous improvement as you grow." },
+  { img: imgProfessional, num: "01", title: "Discover", desc: "Deep understanding of your business model, objectives, and challenges." },
+  { img: imgBuildings,    num: "02", title: "Define",   desc: "Scope, deliverables, success metrics, and timeline — precisely defined." },
+  { img: imgAfrica,       num: "03", title: "Design",   desc: "Architecture, UX, and visual design — validated through prototyping." },
+  { img: imgHero,         num: "04", title: "Develop",  desc: "Agile sprints, continuous integration, and iterative refinement." },
+  { img: imgServer,       num: "05", title: "Deploy",   desc: "Testing, performance benchmarking, security validation — then launch." },
+  { img: imgBuild,        num: "06", title: "Evolve",   desc: "Ongoing support and continuous improvement as you grow." },
 ];
 
 const EngagementSection = () => (
@@ -33,10 +39,24 @@ const EngagementSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {steps.map((s, i) => (
           <FadeUp key={s.num} delay={0.15 + i * 0.08}>
-            <div className="relative glass-card rounded-xl p-6 h-full hover:border-primary/30 transition-all duration-300">
-              <span className="font-display text-5xl font-bold text-primary/10 absolute top-4 right-5">{s.num}</span>
-              <h3 className="font-display font-semibold text-lg mb-2 mt-4">{s.title}</h3>
-              <p className="text-sm text-muted-foreground">{s.desc}</p>
+            <div className="glass-card rounded-xl overflow-hidden h-full hover:border-primary/30 hover:shadow-md transition-all duration-300 group">
+              {/* Image header */}
+              <div className="h-40 w-full overflow-hidden relative">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Step number overlay on image */}
+                <span className="absolute top-3 right-4 font-display text-4xl font-bold text-white/30 leading-none select-none">
+                  {s.num}
+                </span>
+              </div>
+              {/* Card body */}
+              <div className="p-6">
+                <h3 className="font-display font-semibold text-lg mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground">{s.desc}</p>
+              </div>
             </div>
           </FadeUp>
         ))}

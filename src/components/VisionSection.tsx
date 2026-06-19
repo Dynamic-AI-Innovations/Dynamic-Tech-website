@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import imgCity from "@/assets/slide-buildings.jpg";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -12,10 +13,10 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const visionStats = [
-  { value: "1.4B", desc: "People on the world's youngest continent" },
+  { value: "1.4B",   desc: "People on the world's youngest continent" },
   { value: "$180B+", desc: "Projected African digital economy" },
-  { value: "600M+", desc: "Mobile internet users across Africa" },
-  { value: "Lagos", desc: "Africa's tech capital, our home" },
+  { value: "600M+",  desc: "Mobile internet users across Africa" },
+  { value: "Lagos",  desc: "Africa's tech capital, our home" },
 ];
 
 const VisionSection = () => (
@@ -23,28 +24,45 @@ const VisionSection = () => (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
 
     <div className="max-w-6xl mx-auto relative z-10">
-      <FadeUp>
-        <p className="label-caps text-primary mb-4">Our North Star</p>
-      </FadeUp>
-      <FadeUp delay={0.1}>
-        <h2 className="heading-lg max-w-3xl">
-          Building Africa's <span className="text-gradient-accent italic">Silicon Valley</span>
-        </h2>
-      </FadeUp>
-      <FadeUp delay={0.2}>
-        <p className="body-lg text-muted-foreground max-w-3xl mt-6">
-          Not by replicating what exists elsewhere — but by building something uniquely African, with homegrown innovation and world-class engineering.
-        </p>
-      </FadeUp>
-      <FadeUp delay={0.3}>
-        <blockquote className="mt-8 pl-6 border-l-2 border-accent/40">
-          <p className="text-lg italic text-muted-foreground">
-            "We are not just building software. We are building a continent's digital future."
-          </p>
-        </blockquote>
-      </FadeUp>
+      {/* Split layout: text left, image right */}
+      <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center mb-16">
+        <div>
+          <FadeUp>
+            <p className="label-caps text-primary mb-4">Our North Star</p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <h2 className="heading-lg max-w-3xl">
+              Building Africa's <span className="text-gradient-accent italic">Silicon Valley</span>
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <p className="body-lg text-muted-foreground mt-6">
+              Not by replicating what exists elsewhere — but by building something uniquely African, with homegrown innovation and world-class engineering.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.3}>
+            <blockquote className="mt-8 pl-6 border-l-2 border-accent/40">
+              <p className="text-lg italic text-muted-foreground">
+                "We are not just building software. We are building a continent's digital future."
+              </p>
+            </blockquote>
+          </FadeUp>
+        </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        {/* Image — right side */}
+        <FadeUp delay={0.25}>
+          <div className="mt-12 lg:mt-0 rounded-2xl overflow-hidden shadow-xl h-72 lg:h-96">
+            <img
+              src={imgCity}
+              alt="Africa's growing cities and digital future"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </FadeUp>
+      </div>
+
+      {/* Stats row */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {visionStats.map((s, i) => (
           <FadeUp key={s.value} delay={0.3 + i * 0.1}>
             <div className="glass-card rounded-xl p-6 text-center">
