@@ -33,7 +33,7 @@ const CoreServiceSection = () => (
       </FadeUp>
       <FadeUp delay={0.2}>
         <p className="body-lg text-muted-foreground max-w-2xl mt-4">
-          Before we write a single line of code — we think. Deeply, rigorously, and with your interests at the centre of every decision.
+          Before we write a single line of code, we think. Rigorously, with your interests at the centre of every decision.
         </p>
       </FadeUp>
 

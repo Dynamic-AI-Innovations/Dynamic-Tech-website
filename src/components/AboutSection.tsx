@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-const stats = [
-  { value: "10+", label: "Service Capabilities" },
-  { value: "5", label: "Technology Domains" },
-  { value: "Pan-African", label: "Market Reach" },
-  { value: "100%", label: "Client Satisfaction Focus" },
+const pillars = [
+  { title: "Strategy",       desc: "We define the right problem before we touch the technology." },
+  { title: "Engineering",    desc: "Full-stack delivery — software, AI, IoT, hardware." },
+  { title: "Partnership",    desc: "We stay engaged long after launch." },
 ];
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
@@ -26,34 +25,36 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 const AboutSection = () => (
   <section id="about" className="section-padding py-24 lg:py-32">
-    <div className="max-w-6xl mx-auto">
-      <FadeUp>
-        <p className="label-caps text-primary mb-4">Who We Are</p>
-      </FadeUp>
-      <FadeUp delay={0.1}>
-        <h2 className="heading-lg max-w-3xl">
-          Africa-based. <span className="text-gradient-primary">Globally capable.</span>
-        </h2>
-      </FadeUp>
-      <FadeUp delay={0.2}>
-        <p className="body-lg text-muted-foreground max-w-3xl mt-6">
-          We combine global consultancy standards with genuine African market intelligence — the partner you call when the stakes are high.
-        </p>
-      </FadeUp>
-      <FadeUp delay={0.3}>
-        <blockquote className="mt-10 pl-6 border-l-2 border-primary/40">
-          <p className="text-lg italic text-muted-foreground">
-            "We are not just building technology companies. We are building Africa's Silicon Valley — one bold solution at a time."
+    <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-2 lg:gap-20 lg:items-start">
+      <div>
+        <FadeUp>
+          <p className="label-caps text-primary mb-4">Who We Are</p>
+        </FadeUp>
+        <FadeUp delay={0.1}>
+          <h2 className="heading-lg">
+            Africa-based. <span className="text-gradient-primary">Globally capable.</span>
+          </h2>
+        </FadeUp>
+        <FadeUp delay={0.2}>
+          <p className="body-lg text-muted-foreground mt-6">
+            We combine global consultancy standards with genuine African market intelligence — the partner you call when the stakes are high.
           </p>
-        </blockquote>
-      </FadeUp>
+        </FadeUp>
+        <FadeUp delay={0.3}>
+          <blockquote className="mt-10 pl-6 border-l-2 border-primary/40">
+            <p className="text-lg italic text-muted-foreground">
+              "We are not just building technology companies. We are building Africa's Silicon Valley — one bold solution at a time."
+            </p>
+          </blockquote>
+        </FadeUp>
+      </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-        {stats.map((s, i) => (
-          <FadeUp key={s.label} delay={0.3 + i * 0.1}>
-            <div className="glass-card rounded-xl p-6 text-center">
-              <p className="font-display text-3xl md:text-4xl font-bold text-gradient-primary">{s.value}</p>
-              <p className="text-sm text-muted-foreground mt-2">{s.label}</p>
+      <div className="mt-14 lg:mt-0 flex flex-col gap-px border border-border rounded-2xl overflow-hidden">
+        {pillars.map((p, i) => (
+          <FadeUp key={p.title} delay={0.2 + i * 0.1}>
+            <div className="bg-white px-8 py-7 hover:bg-slate-50 transition-colors duration-200">
+              <p className="font-display font-semibold text-foreground mb-1">{p.title}</p>
+              <p className="text-sm text-muted-foreground">{p.desc}</p>
             </div>
           </FadeUp>
         ))}
