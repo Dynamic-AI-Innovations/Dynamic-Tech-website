@@ -33,19 +33,24 @@ const ProofSection = () => {
     <section className="border-b border-border bg-white">
       {/* Metrics row */}
       <div ref={ref} className="section-padding py-10 border-b border-border">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4">
           {metrics.map((m, i) => (
             <motion.div
               key={m.label}
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="text-center px-4 lg:px-8 first:pl-0 last:pr-0"
+              className={[
+                "text-center px-3 py-2 lg:px-8",
+                i % 2 === 1 ? "border-l border-border" : "",
+                i >= 2 ? "border-t border-border lg:border-t-0" : "",
+                i > 0 ? "lg:border-l" : "",
+              ].filter(Boolean).join(" ")}
             >
-              <p className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+              <p className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
                 {m.value}
               </p>
-              <p className="text-xs text-muted-foreground mt-2 uppercase tracking-widest">
+              <p className="text-xs text-muted-foreground mt-2 uppercase tracking-widest leading-snug">
                 {m.label}
               </p>
             </motion.div>

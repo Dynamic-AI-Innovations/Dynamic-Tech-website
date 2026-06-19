@@ -41,7 +41,7 @@ const EngagementSection = () => (
           <FadeUp key={s.num} delay={0.15 + i * 0.08}>
             <div className="glass-card rounded-xl overflow-hidden h-full hover:border-primary/30 hover:shadow-md transition-all duration-300 group">
               {/* Image header */}
-              <div className="h-40 w-full overflow-hidden relative">
+              <div className="h-32 md:h-40 w-full overflow-hidden relative">
                 <img
                   src={s.img}
                   alt={s.title}

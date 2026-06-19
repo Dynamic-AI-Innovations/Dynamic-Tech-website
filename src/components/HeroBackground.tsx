@@ -130,6 +130,8 @@ const HeroBackground = () => (
     />
     {/* Top + bottom fade */}
     <div className="absolute inset-0 bg-gradient-to-b from-[#030c1b]/55 via-transparent to-[#030c1b]/72" />
+    {/* Mobile: extra top-down overlay so text stays readable on portrait screens */}
+    <div className="absolute inset-0 md:hidden bg-gradient-to-b from-[#030c1b]/75 via-[#030c1b]/55 to-transparent" />
   </div>
 );
 

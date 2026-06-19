@@ -223,11 +223,11 @@ const IdeationModal = ({ open, onOpenChange }: IdeationModalProps) => {
             </AnimatePresence>
 
             {/* Footer */}
-            <div className="flex items-center justify-between mt-8 pt-6 border-t border-border">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mt-8 pt-6 border-t border-border">
               <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-                <Lock size={12} className="text-accent" /> Your details are kept confidential. We never share your information with third parties.
+                <Lock size={12} className="text-accent" /> Details are kept confidential.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 justify-end">
                 {step > 1 && (
                   <Button variant="heroOutline" onClick={() => setStep(step - 1)} className="gap-1">
                     <ArrowLeft size={16} /> Back

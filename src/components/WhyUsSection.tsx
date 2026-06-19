@@ -31,12 +31,12 @@ const WhyUsSection = () => (
         <h2 className="heading-lg">Why choose <span className="text-gradient-primary">Dynamics?</span></h2>
       </FadeUp>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mt-14">
         {reasons.map((r, i) => (
           <FadeUp key={r.title} delay={0.15 + i * 0.06}>
-            <div className="glass-card rounded-xl p-6 h-full hover:border-primary/30 transition-all duration-300">
-              <h3 className="font-display font-semibold mb-2">{r.title}</h3>
-              <p className="text-sm text-muted-foreground">{r.desc}</p>
+            <div className="glass-card rounded-xl p-4 md:p-6 h-full hover:border-primary/30 transition-all duration-300">
+              <h3 className="font-display font-semibold text-sm md:text-base mb-1.5 md:mb-2">{r.title}</h3>
+              <p className="text-xs md:text-sm text-muted-foreground">{r.desc}</p>
             </div>
           </FadeUp>
         ))}
