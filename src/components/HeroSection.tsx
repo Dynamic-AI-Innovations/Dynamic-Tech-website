@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import IdeationModal from "@/components/IdeationModal";
-import heroBg from "@/assets/hero-bg.jpg";
+import HeroBackground from "@/components/HeroBackground";
 
 const pillars = [
   {
@@ -26,11 +26,7 @@ const HeroSection = () => {
   return (
     <>
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-black/52" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
-        </div>
+        <HeroBackground />
 
         <div className="relative z-10 section-padding pt-32 pb-20">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="label-caps text-primary mb-6">
