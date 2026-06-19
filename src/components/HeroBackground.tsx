@@ -63,6 +63,32 @@ const HeroBackground = () => (
         </radialGradient>
       </defs>
 
+      {/* Africa continent silhouette — hub (Lagos) sits on the west coast */}
+      <motion.path
+        d="
+          M 582,190
+          C 620,185 665,186 712,198
+          C 718,210 720,230 718,250
+          C 716,264 714,272 718,280
+          C 720,288 714,296 705,301
+          C 695,307 684,320 674,340
+          C 660,368 643,390 628,400
+          C 618,396 606,382 594,368
+          C 586,352 582,334 582,312
+          C 582,302 584,292 584,282
+          C 582,272 578,262 575,252
+          C 572,242 578,230 586,218
+          C 588,208 586,198 582,190 Z
+        "
+        fill="rgba(59,130,246,0.13)"
+        stroke="rgba(96,165,250,0.72)"
+        strokeWidth="1.4"
+        filter="url(#line-glow)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.8, delay: 0.1 }}
+      />
+
       {/* Hub aura */}
       <circle cx={hub.x} cy={hub.y} r="90" fill="url(#hub-aura)" />
 
@@ -98,26 +124,17 @@ const HeroBackground = () => (
         </motion.g>
       ))}
 
-      {/* Hub — pulsing rings (pure SVG animate, no Framer transform issues) */}
+      {/* Hub — dual staggered pulsing rings for radar/sonar "beep" */}
       <circle cx={hub.x} cy={hub.y} r="14" fill="rgba(59,130,246,0.18)">
-        <animate attributeName="r"       values="14;42;14" dur="2.8s" repeatCount="indefinite" />
+        <animate attributeName="r"       values="14;48;14" dur="2.8s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0.7;0;0.7" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx={hub.x} cy={hub.y} r="10" fill="rgba(59,130,246,0.12)">
+        <animate attributeName="r"       values="10;60;10" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
       </circle>
       <circle cx={hub.x} cy={hub.y} r="7" fill="#3b82f6" filter="url(#hub-glow)" />
       <circle cx={hub.x} cy={hub.y} r="4" fill="#bfdbfe" />
-
-      {/* Hub label */}
-      <text
-        x={hub.x + 16}
-        y={hub.y - 14}
-        fill="rgba(147,197,253,0.65)"
-        fontSize="10.5"
-        fontFamily="'Space Grotesk', Arial, sans-serif"
-        fontWeight="600"
-        letterSpacing="0.08em"
-      >
-        LAGOS · NIGERIA
-      </text>
     </svg>
 
     {/* Left gradient — strong where text lives, fades to transparent on right */}
