@@ -7,7 +7,7 @@ const items = [
 ];
 
 const MarqueeBanner = () => (
-  <div className="relative overflow-hidden border-y border-border py-5 bg-secondary/30">
+  <div className="relative overflow-hidden border-y border-border py-5 bg-slate-100">
     <div className="flex animate-marquee whitespace-nowrap">
       {[...items, ...items].map((item, i) => (
         <span key={i} className="mx-8 text-sm font-medium text-muted-foreground">

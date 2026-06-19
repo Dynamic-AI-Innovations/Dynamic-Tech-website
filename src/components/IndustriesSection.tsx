@@ -23,7 +23,7 @@ const industries = [
 ];
 
 const IndustriesSection = () => (
-  <section className="section-padding py-24 lg:py-32 bg-secondary/20">
+  <section className="section-padding py-24 lg:py-32 bg-slate-50">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
         <p className="label-caps text-primary mb-4">Sectors</p>

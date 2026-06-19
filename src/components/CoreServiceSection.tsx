@@ -21,7 +21,7 @@ const steps = [
 ];
 
 const CoreServiceSection = () => (
-  <section id="core-service" className="section-padding py-24 lg:py-32 bg-secondary/20">
+  <section id="core-service" className="section-padding py-24 lg:py-32 bg-slate-50">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
         <p className="label-caps text-accent mb-4">Core Service</p>

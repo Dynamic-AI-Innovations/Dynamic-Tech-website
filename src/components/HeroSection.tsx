@@ -28,8 +28,8 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-background/65" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
+          <div className="absolute inset-0 bg-black/52" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
         </div>
 
         <div className="relative z-10 section-padding pt-32 pb-20">
@@ -37,13 +37,13 @@ const HeroSection = () => {
             Africa's Innovation & Transformation Consultancy
           </motion.p>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }} className="heading-xl max-w-4xl">
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }} className="heading-xl max-w-4xl text-white">
             We Ideate.{" "}
             <span className="text-gradient-accent">We Engineer.</span>{" "}
             <span className="text-gradient-primary">We Transform.</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="body-lg text-muted-foreground max-w-2xl mt-6">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="body-lg text-white/70 max-w-2xl mt-6">
             From idea to live product — Africa's leading Innovation & Transformation Consultancy.
           </motion.p>
 
@@ -51,7 +51,7 @@ const HeroSection = () => {
             <Button variant="hero" size="lg" className="text-base px-8 py-6" onClick={() => setModalOpen(true)}>
               Start with Ideation <ArrowRight className="ml-1" size={18} />
             </Button>
-            <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
+            <Button size="lg" className="text-base px-8 py-6 border border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10 transition-all duration-300 font-semibold rounded-md" asChild>
               <a href="#services">Explore Services</a>
             </Button>
           </motion.div>
@@ -60,10 +60,10 @@ const HeroSection = () => {
         <div className="relative z-10 section-padding pb-20">
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map((p, i) => (
-              <motion.div key={p.num} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 + i * 0.15 }} className="glass-card rounded-xl p-6 hover:border-primary/40 transition-all duration-300 group">
+              <motion.div key={p.num} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 + i * 0.15 }} className="rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/15 bg-white/8 backdrop-blur-sm">
                 <p className="label-caps text-primary mb-2">{p.num} / {p.label}</p>
-                <h3 className="font-display font-semibold text-lg mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.desc}</p>
+                <h3 className="font-display font-semibold text-lg mb-2 text-white">{p.title}</h3>
+                <p className="text-sm text-white/60">{p.desc}</p>
               </motion.div>
             ))}
           </div>

@@ -51,13 +51,13 @@ const HeroSlider = () => {
             alt={slides[current].alt}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 section-padding pb-12">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-foreground"
+              className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white"
             >
               {slides[current].caption}
             </motion.p>
@@ -69,7 +69,7 @@ const HeroSlider = () => {
       <div className="absolute bottom-6 right-6 md:right-12 lg:right-20 xl:right-32 flex items-center gap-3 z-10">
         <button
           onClick={prev}
-          className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-foreground hover:bg-primary/20 transition-colors"
+          className="w-10 h-10 rounded-full bg-black/30 border border-white/20 flex items-center justify-center text-white hover:bg-black/50 transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft size={20} />
@@ -88,7 +88,7 @@ const HeroSlider = () => {
         </div>
         <button
           onClick={next}
-          className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-foreground hover:bg-primary/20 transition-colors"
+          className="w-10 h-10 rounded-full bg-black/30 border border-white/20 flex items-center justify-center text-white hover:bg-black/50 transition-colors"
           aria-label="Next slide"
         >
           <ChevronRight size={20} />
