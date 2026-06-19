@@ -8,15 +8,15 @@ import heroBg from "@/assets/hero-bg.jpg";
 const pillars = [
   {
     num: "01", label: "IDEATE", title: "Innovation Consulting",
-    desc: "We start where most companies stop — with the right problem. Deep research, human insight, and market intelligence shape every idea into a clear, fundable, execution-ready plan.",
+    desc: "The right problem, framed correctly. Research and insight turned into a clear, executable plan.",
   },
   {
     num: "02", label: "ENGINEER", title: "Full-Stack Delivery",
-    desc: "AI, IoT, mobile, web, software & hardware — precision-built for African markets and engineered to stand alongside the world's best. We don't cut corners on quality.",
+    desc: "AI, IoT, mobile, web and hardware — engineered to world-class standards, built for African markets.",
   },
   {
     num: "03", label: "TRANSFORM", title: "Strategic Partnership",
-    desc: "We don't deliver and disappear. We stay, scale alongside you, and drive continuous growth — because Africa's digital future is a long-term build, and we're here for all of it.",
+    desc: "We stay, scale, and drive growth alongside you — long after launch.",
   },
 ];
 
@@ -28,8 +28,8 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+          <div className="absolute inset-0 bg-background/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
         </div>
 
         <div className="relative z-10 section-padding pt-32 pb-20">
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="body-lg text-muted-foreground max-w-2xl mt-6">
-            From bold idea to market-ready solution — Dynamics Technology is Africa's most ambitious Innovation & Transformation Consultancy, delivering world-class technology across every domain.
+            From idea to live product — Africa's leading Innovation & Transformation Consultancy.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="flex flex-wrap gap-4 mt-10">

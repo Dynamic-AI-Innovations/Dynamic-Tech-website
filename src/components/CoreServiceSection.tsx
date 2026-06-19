@@ -1,7 +1,5 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Target, Users, Lightbulb, Layers, BarChart3, Rocket, Map } from "lucide-react";
-
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -13,13 +11,13 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const steps = [
-  { icon: Target, num: "01", title: "Problem Definition & Framing", desc: "Structured discovery to articulate the core challenge, separate symptoms from root causes." },
-  { icon: Users, num: "02", title: "Human-Centred Research", desc: "User interviews, empathy mapping, and market research grounded in real human needs." },
-  { icon: Lightbulb, num: "03", title: "Ideation Workshops", desc: "Facilitated innovation sessions to generate and stress-test viable solution concepts." },
-  { icon: Layers, num: "04", title: "Solution Architecture", desc: "Implementation-ready technology architecture — platforms, frameworks, integrations." },
-  { icon: BarChart3, num: "05", title: "Feasibility & Business Case", desc: "Evidence-based analysis of technical feasibility, commercial viability, and ROI." },
-  { icon: Rocket, num: "06", title: "Prototype & PoC", desc: "Rapid prototypes to validate assumptions with real users and de-risk development." },
-  { icon: Map, num: "07", title: "Roadmap & Blueprint", desc: "Prioritised roadmap with phased milestones from validated concept to live solution." },
+  { num: "01", title: "Problem Definition & Framing", desc: "Articulate the real challenge, not just the symptom." },
+  { num: "02", title: "Human-Centred Research", desc: "User interviews and market research grounded in real needs." },
+  { num: "03", title: "Ideation Workshops", desc: "Facilitated sessions to surface and stress-test the best concepts." },
+  { num: "04", title: "Solution Architecture", desc: "Platform, framework, and integration decisions — ready to build." },
+  { num: "05", title: "Feasibility & Business Case", desc: "Technical feasibility, commercial viability, and ROI — evidence-based." },
+  { num: "06", title: "Prototype & PoC", desc: "Rapid prototypes that validate with real users before full build." },
+  { num: "07", title: "Roadmap & Blueprint", desc: "Phased milestones from validated concept to live product." },
 ];
 
 const CoreServiceSection = () => (
@@ -42,13 +40,8 @@ const CoreServiceSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {steps.map((s, i) => (
           <FadeUp key={s.num} delay={0.2 + i * 0.08}>
-            <div className="glass-card rounded-xl p-6 h-full hover:border-accent/30 transition-all duration-300 group">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <s.icon size={18} className="text-accent" />
-                </div>
-                <span className="label-caps text-accent/60">{s.num}</span>
-              </div>
+            <div className="glass-card rounded-xl p-6 h-full hover:border-accent/30 transition-all duration-300">
+              <p className="label-caps text-accent/60 mb-4">{s.num}</p>
               <h3 className="font-display font-semibold mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground">{s.desc}</p>
             </div>

@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
-    --foreground: 210 20% 95%;
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
 
     --primary: 214 72% 37%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 220 20% 30%;
 
-    --muted: 220 14% 14%;
-    --muted-foreground: 215 12% 55%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 215 12% 45%;
 
-    --accent: 40 85% 50%;
-    --accent-foreground: 220 20% 7%;
+    --accent: 40 85% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
     --ring: 214 72% 37%;
 
     --radius: 0.75rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(220 20% 7%) 0%, hsl(220 25% 12%) 50%, hsl(225 30% 10%) 100%);
-    --glow-primary: 0 0 60px hsl(214 72% 37% / 0.2);
-    --glow-accent: 0 0 60px hsl(40 85% 50% / 0.15);
-    --text-gradient-primary: linear-gradient(135deg, hsl(214 72% 45%), hsl(214 60% 60%));
-    --text-gradient-accent: linear-gradient(135deg, hsl(40 85% 50%), hsl(30 90% 55%));
-    --surface-glass: hsl(220 18% 10% / 0.6);
-    --border-glow: hsl(214 72% 37% / 0.2);
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(220 25% 96%) 50%, hsl(225 30% 95%) 100%);
+    --glow-primary: 0 0 40px hsl(214 72% 37% / 0.08);
+    --glow-accent: 0 0 40px hsl(40 85% 50% / 0.06);
+    --text-gradient-primary: linear-gradient(135deg, hsl(214 72% 32%), hsl(214 60% 46%));
+    --text-gradient-accent: linear-gradient(135deg, hsl(40 85% 36%), hsl(30 90% 42%));
+    --surface-glass: hsl(0 0% 100% / 0.85);
+    --border-glow: hsl(214 72% 37% / 0.12);
 
-    --sidebar-background: 220 18% 10%;
-    --sidebar-foreground: 210 20% 85%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 30%;
     --sidebar-primary: 214 72% 37%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 15%;
-    --sidebar-accent-foreground: 210 20% 85%;
-    --sidebar-border: 220 14% 18%;
+    --sidebar-accent: 220 14% 94%;
+    --sidebar-accent-foreground: 220 20% 30%;
+    --sidebar-border: 220 14% 88%;
     --sidebar-ring: 214 72% 37%;
   }
 }

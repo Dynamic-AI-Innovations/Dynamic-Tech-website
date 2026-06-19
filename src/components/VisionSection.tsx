@@ -12,10 +12,10 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const visionStats = [
-  { value: "1.4B", desc: "People — the world's youngest, fastest-growing continent" },
-  { value: "$180B+", desc: "Projected African digital economy value" },
+  { value: "1.4B", desc: "People on the world's youngest continent" },
+  { value: "$180B+", desc: "Projected African digital economy" },
   { value: "600M+", desc: "Mobile internet users across Africa" },
-  { value: "Lagos", desc: "Africa's tech capital — our home and innovation engine" },
+  { value: "Lagos", desc: "Africa's tech capital, our home" },
 ];
 
 const VisionSection = () => (
@@ -33,7 +33,7 @@ const VisionSection = () => (
       </FadeUp>
       <FadeUp delay={0.2}>
         <p className="body-lg text-muted-foreground max-w-3xl mt-6">
-          Not by replicating what exists elsewhere — but by creating something uniquely African. A technology ecosystem defined by homegrown innovation, world-class engineering, and solutions born from the African experience.
+          Not by replicating what exists elsewhere — but by building something uniquely African, with homegrown innovation and world-class engineering.
         </p>
       </FadeUp>
       <FadeUp delay={0.3}>

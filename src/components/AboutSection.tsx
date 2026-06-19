@@ -37,7 +37,7 @@ const AboutSection = () => (
       </FadeUp>
       <FadeUp delay={0.2}>
         <p className="body-lg text-muted-foreground max-w-3xl mt-6">
-          Dynamics Technology is not a typical technology vendor. We are the partner you call when you need to think bigger, build bolder, and deliver smarter. We combine the strategic depth of a global consultancy with the cultural intelligence that only an Africa-based firm can offer.
+          We combine global consultancy standards with genuine African market intelligence — the partner you call when the stakes are high.
         </p>
       </FadeUp>
       <FadeUp delay={0.3}>

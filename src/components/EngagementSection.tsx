@@ -12,12 +12,12 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const steps = [
-  { num: "01", title: "Discover", desc: "We invest in deeply understanding your organisation — business model, objectives, and challenges." },
-  { num: "02", title: "Define", desc: "Insights translated into precise project definition — scope, deliverables, success metrics, and timeline." },
-  { num: "03", title: "Design", desc: "Co-designed architecture, UX, integrations, and visual design — validated through rapid prototyping." },
-  { num: "04", title: "Develop", desc: "Agile sprints, continuous integration, regular demonstrations, and iterative refinement." },
-  { num: "05", title: "Deploy", desc: "Thorough testing, performance benchmarking, security validation, and confident go-live." },
-  { num: "06", title: "Evolve", desc: "Ongoing support, performance monitoring, and continuous improvement as your business grows." },
+  { num: "01", title: "Discover", desc: "Deep understanding of your business model, objectives, and challenges." },
+  { num: "02", title: "Define", desc: "Scope, deliverables, success metrics, and timeline — precisely defined." },
+  { num: "03", title: "Design", desc: "Architecture, UX, and visual design — validated through prototyping." },
+  { num: "04", title: "Develop", desc: "Agile sprints, continuous integration, and iterative refinement." },
+  { num: "05", title: "Deploy", desc: "Testing, performance benchmarking, security validation — then launch." },
+  { num: "06", title: "Evolve", desc: "Ongoing support and continuous improvement as you grow." },
 ];
 
 const EngagementSection = () => (

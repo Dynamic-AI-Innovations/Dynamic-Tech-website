@@ -33,7 +33,7 @@ const CTASection = () => {
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="body-lg text-muted-foreground max-w-2xl mx-auto mt-6">
-              The future belongs to organisations that act on their ideas. We are Building Africa's Silicon Valley — and we want you to be part of it.
+              The future belongs to organisations that act on their ideas. We want you to be part of what we're building.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
