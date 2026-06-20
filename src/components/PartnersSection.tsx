@@ -1,6 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+import logoServiceLinka from "@/assets/partners/servicelinka.png";
+import logoAcadi        from "@/assets/partners/acadi.png";
+import logoSwapConnect  from "@/assets/partners/swapconnect.png";
+import logoNehi         from "@/assets/partners/nehi.png";
+import logoIntercessors from "@/assets/partners/intercessors-for-africa.png";
+import logoJkMurgan     from "@/assets/partners/jk-murgan.jpg";
+import logoApostolic    from "@/assets/partners/apostolic-altar.jpg";
+
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -11,15 +19,14 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   );
 };
 
-// logo: path to image file once saved; leave undefined to show initials fallback
 const partners: { name: string; sector: string; initials: string; logo?: string }[] = [
-  { name: "SwapConnect",                    sector: "Technology",                    initials: "SC" },
-  { name: "ServiceLinka",                   sector: "Service Marketplace",           initials: "SL" },
-  { name: "ACCADI",                         sector: "Anglican Community Dev",        initials: "AC" },
-  { name: "Nehi Constructs Limited",        sector: "Construction & Infrastructure", initials: "NC" },
-  { name: "JK. Murgan",                     sector: "Business Services",             initials: "JK" },
-  { name: "Intercessors for Africa",        sector: "Faith & Community",             initials: "IF" },
-  { name: "Apostolic Altar Christian Net.", sector: "Faith & Community",             initials: "AA" },
+  { name: "ServiceLinka",                   sector: "Service Marketplace",           initials: "SL", logo: logoServiceLinka },
+  { name: "SwapConnect",                    sector: "Technology",                    initials: "SC", logo: logoSwapConnect },
+  { name: "ACCADI",                         sector: "Anglican Community Dev",        initials: "AC", logo: logoAcadi },
+  { name: "Nehi Constructs Limited",        sector: "Construction & Infrastructure", initials: "NC", logo: logoNehi },
+  { name: "Intercessors for Africa",        sector: "Faith & Community",             initials: "IF", logo: logoIntercessors },
+  { name: "JK. Murgan",                     sector: "Business Services",             initials: "JK", logo: logoJkMurgan },
+  { name: "Apostolic Altar Christian Net.", sector: "Faith & Community",             initials: "AA", logo: logoApostolic },
   { name: "African Kingdom Business Forum", sector: "Business & Trade",              initials: "AK" },
   { name: "Smarttouchfix",                  sector: "Tech Repairs & Solutions",      initials: "SF" },
   { name: "Thrivehill Studio",              sector: "Creative & Design",             initials: "TH" },
