@@ -2,12 +2,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef, type CSSProperties } from "react";
 
 const partners = [
-  "African Kingdom Business Forum",
+  "ServiceLinka",
   "SwapConnect",
   "ACCADI",
-  "Nehi Construction",
-  "Smarttouchfix",
+  "Nehi Constructs Limited",
+  "Intercessors for Africa",
   "JK. Murgan",
+  "Apostolic Altar Christian Network",
+  "SmartTouchFix",
   "Thrivehill Studio",
   "TheDigitalLasisi",
   "Queens Delight Concepts",

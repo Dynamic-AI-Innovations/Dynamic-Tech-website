@@ -1,13 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-import logoServiceLinka from "@/assets/partners/servicelinka.png";
-import logoAcadi        from "@/assets/partners/acadi.png";
-import logoSwapConnect  from "@/assets/partners/swapconnect.png";
-import logoNehi         from "@/assets/partners/nehi.png";
-import logoIntercessors from "@/assets/partners/intercessors-for-africa.png";
-import logoJkMurgan     from "@/assets/partners/jk-murgan.jpg";
-import logoApostolic    from "@/assets/partners/apostolic-altar.jpg";
+import logoServiceLinka  from "@/assets/partners/servicelinka.png";
+import logoAcadi         from "@/assets/partners/acadi.png";
+import logoSwapConnect   from "@/assets/partners/swapconnect.png";
+import logoNehi          from "@/assets/partners/nehi.png";
+import logoIntercessors  from "@/assets/partners/intercessors-for-africa.png";
+import logoJkMurgan      from "@/assets/partners/jk-murgan.jpg";
+import logoApostolic     from "@/assets/partners/apostolic-altar.jpg";
+import logoSmartTouchFix from "@/assets/partners/smarttouchfix.png";
+import logoThrivehill    from "@/assets/partners/thrivehill.png";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -27,9 +29,8 @@ const partners: { name: string; sector: string; initials: string; logo?: string 
   { name: "Intercessors for Africa",        sector: "Faith & Community",             initials: "IF", logo: logoIntercessors },
   { name: "JK. Murgan",                     sector: "Business Services",             initials: "JK", logo: logoJkMurgan },
   { name: "Apostolic Altar Christian Net.", sector: "Faith & Community",             initials: "AA", logo: logoApostolic },
-  { name: "African Kingdom Business Forum", sector: "Business & Trade",              initials: "AK" },
-  { name: "Smarttouchfix",                  sector: "Tech Repairs & Solutions",      initials: "SF" },
-  { name: "Thrivehill Studio",              sector: "Creative & Design",             initials: "TH" },
+  { name: "SmartTouchFix",                  sector: "Tech Repairs & Solutions",      initials: "SF", logo: logoSmartTouchFix },
+  { name: "Thrivehill Studio",              sector: "Creative & Design",             initials: "TH", logo: logoThrivehill },
   { name: "TheDigitalLasisi",               sector: "Digital Marketing",             initials: "DL" },
   { name: "Queens Delight Concepts",        sector: "Lifestyle & Commerce",          initials: "QD" },
 ];
