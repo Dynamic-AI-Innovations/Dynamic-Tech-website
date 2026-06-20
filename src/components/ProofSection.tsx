@@ -85,7 +85,7 @@ const ProofSection = () => {
                 <img
                   src={p.src}
                   alt={p.name}
-                  className="h-8 w-auto max-w-[100px] object-contain opacity-50 grayscale"
+                  className="h-8 w-auto max-w-[100px] object-contain opacity-80"
                 />
               </div>
             ))}
