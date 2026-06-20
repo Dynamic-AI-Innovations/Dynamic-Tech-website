@@ -1,11 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import imgProfessional from "@/assets/slide-professional.jpeg";
-import imgAfrica      from "@/assets/slide-africa.webp";
-import imgHero        from "@/assets/hero-bg.jpg";
-import imgServer      from "@/assets/slide-server.jpg";
-import imgBuildings   from "@/assets/slide-buildings.jpg";
-import imgBuild       from "@/assets/slide-build.jpg";
+import imgStep1 from "@/assets/step-01-problem-definition.jpg";
+import imgStep2 from "@/assets/step-02-human-research.jpg";
+import imgStep3 from "@/assets/step-03-ideation-workshop.jpg";
+import imgStep4 from "@/assets/step-04-solution-architecture.jpg";
+import imgStep5 from "@/assets/step-05-feasibility.jpg";
+import imgStep6 from "@/assets/step-06-prototype.jpg";
+import imgAfrica from "@/assets/slide-africa.webp";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -18,13 +19,13 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const steps = [
-  { img: imgProfessional, num: "01", title: "Problem Definition & Framing",  desc: "Articulate the real challenge, not just the symptom." },
-  { img: imgAfrica,       num: "02", title: "Human-Centred Research",         desc: "User interviews and market research grounded in real needs." },
-  { img: imgHero,         num: "03", title: "Ideation Workshops",             desc: "Facilitated sessions to surface and stress-test the best concepts." },
-  { img: imgServer,       num: "04", title: "Solution Architecture",          desc: "Platform, framework, and integration decisions — ready to build." },
-  { img: imgBuildings,    num: "05", title: "Feasibility & Business Case",    desc: "Technical feasibility, commercial viability, and ROI — evidence-based." },
-  { img: imgBuild,        num: "06", title: "Prototype & PoC",                desc: "Rapid prototypes that validate with real users before full build." },
-  { img: imgAfrica,       num: "07", title: "Roadmap & Blueprint",            desc: "Phased milestones from validated concept to live product." },
+  { img: imgStep1, num: "01", title: "Problem Definition & Framing", desc: "Articulate the real challenge, not just the symptom." },
+  { img: imgStep2, num: "02", title: "Human-Centred Research",        desc: "User interviews and market research grounded in real needs." },
+  { img: imgStep3, num: "03", title: "Ideation Workshops",            desc: "Facilitated sessions to surface and stress-test the best concepts." },
+  { img: imgStep4, num: "04", title: "Solution Architecture",         desc: "Platform, framework, and integration decisions — ready to build." },
+  { img: imgStep5, num: "05", title: "Feasibility & Business Case",   desc: "Technical feasibility, commercial viability, and ROI — evidence-based." },
+  { img: imgStep6, num: "06", title: "Prototype & PoC",               desc: "Rapid prototypes that validate with real users before full build." },
+  { img: imgAfrica, num: "07", title: "Roadmap & Blueprint",          desc: "Phased milestones from validated concept to live product." },
 ];
 
 const CoreServiceSection = () => (
