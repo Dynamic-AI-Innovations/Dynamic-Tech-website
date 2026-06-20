@@ -7,6 +7,7 @@ import IdeationModal from "@/components/IdeationModal";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
+  { label: "Home",     to: "/" },
   { label: "About",    to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Partners", to: "/partners" },

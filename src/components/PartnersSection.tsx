@@ -11,38 +11,50 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   );
 };
 
-const partners = [
-  { name: "African Kingdom Business Forum", sector: "Business & Trade",          initials: "AK" },
-  { name: "SwapConnect",                    sector: "Technology",                 initials: "SC" },
-  { name: "ACCADI",                         sector: "Anglican Community",         initials: "AC" },
-  { name: "Nehi Construction",              sector: "Construction & Infrastructure", initials: "NC" },
-  { name: "Smarttouchfix",                  sector: "Tech Repairs & Solutions",   initials: "SF" },
-  { name: "JK. Murgan",                     sector: "Business Services",          initials: "JM" },
-  { name: "Thrivehill Studio",              sector: "Creative & Design",          initials: "TH" },
-  { name: "TheDigitalLasisi",               sector: "Digital Marketing",          initials: "DL" },
-  { name: "Queens Delight Concepts",        sector: "Lifestyle & Commerce",       initials: "QD" },
+// logo: path to image file once saved; leave undefined to show initials fallback
+const partners: { name: string; sector: string; initials: string; logo?: string }[] = [
+  { name: "SwapConnect",                    sector: "Technology",                    initials: "SC" },
+  { name: "ServiceLinka",                   sector: "Service Marketplace",           initials: "SL" },
+  { name: "ACCADI",                         sector: "Anglican Community Dev",        initials: "AC" },
+  { name: "Nehi Constructs Limited",        sector: "Construction & Infrastructure", initials: "NC" },
+  { name: "JK. Murgan",                     sector: "Business Services",             initials: "JK" },
+  { name: "Intercessors for Africa",        sector: "Faith & Community",             initials: "IF" },
+  { name: "Apostolic Altar Christian Net.", sector: "Faith & Community",             initials: "AA" },
+  { name: "African Kingdom Business Forum", sector: "Business & Trade",              initials: "AK" },
+  { name: "Smarttouchfix",                  sector: "Tech Repairs & Solutions",      initials: "SF" },
+  { name: "Thrivehill Studio",              sector: "Creative & Design",             initials: "TH" },
+  { name: "TheDigitalLasisi",               sector: "Digital Marketing",             initials: "DL" },
+  { name: "Queens Delight Concepts",        sector: "Lifestyle & Commerce",          initials: "QD" },
 ];
 
-const PartnerCard = ({ p }: { p: typeof partners[number] }) => (
-  <div className="inline-flex flex-shrink-0 items-center gap-3 glass-card rounded-xl px-5 py-4 mx-3 min-w-[210px] hover:border-primary/30 transition-colors duration-300">
-    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-primary text-sm flex-shrink-0">
-      {p.initials}
-    </div>
-    <div className="min-w-0">
-      <p className="font-display font-semibold text-sm leading-tight truncate">{p.name}</p>
-      <p className="text-xs text-muted-foreground mt-0.5 truncate">{p.sector}</p>
-    </div>
-  </div>
+const PartnerCard = ({ p, delay }: { p: typeof partners[number]; delay: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-60px" }}
+    transition={{ duration: 0.5, delay }}
+    className="glass-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3 text-center h-36 hover:border-primary/40 hover:shadow-md transition-all duration-300 group"
+  >
+    {p.logo ? (
+      <img
+        src={p.logo}
+        alt={p.name}
+        className="max-h-16 max-w-[140px] object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
+      />
+    ) : (
+      <>
+        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center font-display font-bold text-primary text-base group-hover:bg-primary/20 transition-colors duration-300">
+          {p.initials}
+        </div>
+        <p className="text-xs font-medium text-muted-foreground leading-tight line-clamp-2">{p.name}</p>
+      </>
+    )}
+  </motion.div>
 );
 
-const edgeFade = {
-  maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-  WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-} as React.CSSProperties;
-
 const PartnersSection = () => (
-  <section id="partners" className="py-24 lg:py-32">
-    <div className="section-padding max-w-6xl mx-auto mb-14">
+  <section id="partners" className="section-padding py-24 lg:py-32">
+    <div className="max-w-6xl mx-auto">
       <FadeUp>
         <p className="label-caps text-primary mb-4">Ecosystem</p>
       </FadeUp>
@@ -54,28 +66,10 @@ const PartnersSection = () => (
           A growing network of forward-thinking organisations who share our vision for Africa's digital future.
         </p>
       </FadeUp>
-    </div>
 
-    {/* Row 1 — scrolls left */}
-    <div className="overflow-hidden" style={edgeFade}>
-      <div
-        className="flex animate-marquee whitespace-nowrap"
-        style={{ animationDuration: "40s" }}
-      >
-        {[...partners, ...partners].map((p, i) => (
-          <PartnerCard key={i} p={p} />
-        ))}
-      </div>
-    </div>
-
-    {/* Row 2 — scrolls right */}
-    <div className="overflow-hidden mt-4" style={edgeFade}>
-      <div
-        className="flex animate-marquee whitespace-nowrap"
-        style={{ animationDuration: "34s", animationDirection: "reverse" }}
-      >
-        {[...partners, ...partners].map((p, i) => (
-          <PartnerCard key={i} p={p} />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-14">
+        {partners.map((p, i) => (
+          <PartnerCard key={p.name} p={p} delay={0.08 + i * 0.05} />
         ))}
       </div>
     </div>

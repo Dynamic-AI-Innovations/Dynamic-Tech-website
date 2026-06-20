@@ -16,7 +16,7 @@ const partners = [
 const metrics = [
   { value: "10+", label: "Services & Capabilities" },
   { value: "5",   label: "Technology Domains" },
-  { value: "9+",  label: "Partners & Clients" },
+  { value: "12+", label: "Partners & Clients" },
   { value: "Pan‑African", label: "Market Reach" },
 ];
 
