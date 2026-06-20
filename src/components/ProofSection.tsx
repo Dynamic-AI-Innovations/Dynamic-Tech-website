@@ -1,18 +1,30 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, type CSSProperties } from "react";
 
+import logoServiceLinka  from "@/assets/partners/servicelinka.png";
+import logoSwapConnect   from "@/assets/partners/swapconnect.png";
+import logoAcadi         from "@/assets/partners/acadi.png";
+import logoNehi          from "@/assets/partners/nehi.png";
+import logoIntercessors  from "@/assets/partners/intercessors-for-africa.png";
+import logoJkMurgan      from "@/assets/partners/jk-murgan.jpg";
+import logoApostolic     from "@/assets/partners/apostolic-altar.jpg";
+import logoSmartTouchFix from "@/assets/partners/smarttouchfix.png";
+import logoThrivehill    from "@/assets/partners/thrivehill.png";
+import logoDigitalLasisi from "@/assets/partners/thedigitallasisi.png";
+import logoQueensDelight from "@/assets/partners/queens-delight.png";
+
 const partners = [
-  "ServiceLinka",
-  "SwapConnect",
-  "ACCADI",
-  "Nehi Constructs Limited",
-  "Intercessors for Africa",
-  "JK. Murgan",
-  "Apostolic Altar Christian Network",
-  "SmartTouchFix",
-  "Thrivehill Studio",
-  "TheDigitalLasisi",
-  "Queens Delight Concepts",
+  { name: "ServiceLinka",            src: logoServiceLinka,  dark: false },
+  { name: "SwapConnect",             src: logoSwapConnect,   dark: false },
+  { name: "ACCADI",                  src: logoAcadi,         dark: false },
+  { name: "Nehi Constructs",         src: logoNehi,          dark: false },
+  { name: "Intercessors for Africa", src: logoIntercessors,  dark: false },
+  { name: "JK. Murgan",             src: logoJkMurgan,      dark: true  },
+  { name: "Apostolic Altar",         src: logoApostolic,     dark: true  },
+  { name: "SmartTouchFix",           src: logoSmartTouchFix, dark: false },
+  { name: "Thrivehill Studio",       src: logoThrivehill,    dark: true  },
+  { name: "TheDigitalLasisi",        src: logoDigitalLasisi, dark: false },
+  { name: "Queens Delight",          src: logoQueensDelight, dark: false },
 ];
 
 const metrics = [
@@ -60,21 +72,22 @@ const ProofSection = () => {
         </div>
       </div>
 
-      {/* Partner trust strip */}
-      <div className="py-7">
-        <p className="label-caps text-muted-foreground/40 text-center mb-5">
-          Trusted by
-        </p>
+      {/* Partner logo strip */}
+      <div className="py-6">
+        <p className="label-caps text-muted-foreground/40 text-center mb-5">Trusted by</p>
         <div className="overflow-hidden" style={edgeFade}>
-          <div
-            className="flex animate-marquee whitespace-nowrap"
-            style={{ animationDuration: "42s" }}
-          >
-            {[...partners, ...partners].map((name, i) => (
-              <span key={i} className="mx-7 text-sm font-medium text-muted-foreground">
-                {name}
-                <span className="ml-7 text-border">◆</span>
-              </span>
+          <div className="flex items-center animate-marquee" style={{ animationDuration: "48s" }}>
+            {[...partners, ...partners].map((p, i) => (
+              <div
+                key={i}
+                className={`flex-shrink-0 mx-8 flex items-center justify-center ${p.dark ? "bg-gray-900 rounded-lg px-3 py-1.5" : ""}`}
+              >
+                <img
+                  src={p.src}
+                  alt={p.name}
+                  className="h-8 w-auto max-w-[100px] object-contain opacity-50 grayscale"
+                />
+              </div>
             ))}
           </div>
         </div>

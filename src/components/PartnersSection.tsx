@@ -8,8 +8,10 @@ import logoNehi          from "@/assets/partners/nehi.png";
 import logoIntercessors  from "@/assets/partners/intercessors-for-africa.png";
 import logoJkMurgan      from "@/assets/partners/jk-murgan.jpg";
 import logoApostolic     from "@/assets/partners/apostolic-altar.jpg";
-import logoSmartTouchFix from "@/assets/partners/smarttouchfix.png";
-import logoThrivehill    from "@/assets/partners/thrivehill.png";
+import logoSmartTouchFix   from "@/assets/partners/smarttouchfix.png";
+import logoThrivehill      from "@/assets/partners/thrivehill.png";
+import logoDigitalLasisi   from "@/assets/partners/thedigitallasisi.png";
+import logoQueensDelight   from "@/assets/partners/queens-delight.png";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -31,8 +33,8 @@ const partners: { name: string; sector: string; initials: string; logo?: string 
   { name: "Apostolic Altar Christian Net.", sector: "Faith & Community",             initials: "AA", logo: logoApostolic },
   { name: "SmartTouchFix",                  sector: "Tech Repairs & Solutions",      initials: "SF", logo: logoSmartTouchFix },
   { name: "Thrivehill Studio",              sector: "Creative & Design",             initials: "TH", logo: logoThrivehill },
-  { name: "TheDigitalLasisi",               sector: "Digital Marketing",             initials: "DL" },
-  { name: "Queens Delight Concepts",        sector: "Lifestyle & Commerce",          initials: "QD" },
+  { name: "TheDigitalLasisi",               sector: "Digital Marketing",             initials: "DL", logo: logoDigitalLasisi },
+  { name: "Queens Delight Concepts",        sector: "Lifestyle & Commerce",          initials: "QD", logo: logoQueensDelight },
 ];
 
 const PartnerCard = ({ p, delay }: { p: typeof partners[number]; delay: number }) => (
