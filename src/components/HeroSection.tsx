@@ -47,8 +47,12 @@ const HeroSection = () => {
             <Button variant="hero" size="lg" className="text-base px-8 py-6 w-full sm:w-auto" onClick={() => setModalOpen(true)}>
               Start with Ideation <ArrowRight className="ml-1" size={18} />
             </Button>
-            <Button size="lg" className="text-base px-8 py-6 w-full sm:w-auto border border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10 transition-all duration-300 font-semibold rounded-md" asChild>
-              <a href="#services">Explore Services</a>
+            <Button
+              size="lg"
+              className="text-base px-8 py-6 w-full sm:w-auto border border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10 transition-all duration-300 font-semibold rounded-md"
+              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Explore Services
             </Button>
           </motion.div>
         </div>
