@@ -2,6 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Quote } from "lucide-react";
 
+import logoServiceLinka from "@/assets/partners/servicelinka.png";
+import logoNehi         from "@/assets/partners/nehi.png";
+import logoAcadi        from "@/assets/partners/acadi.png";
+import logoThrivehill   from "@/assets/partners/thrivehill.png";
+
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -13,9 +18,34 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const testimonials = [
-  { quote: "The laptop I bought is of exceptional quality and the service from start to finish was excellent. I wouldn't hesitate to recommend Dynamics Technology to anyone looking for quality technology.", name: "Martha Adekanbi", role: "Technology Products Customer" },
-  { quote: "Awesome customer care. My issue was resolved affordably and quickly by a team that was professional, attentive, and genuinely invested in getting it right.", name: "Mofe Ojo", role: "IT Support Client" },
-  { quote: "Excellent service, great devices, and unbeatable deals. Dynamics Technology delivers on every promise they make. I highly recommend them.", name: "Precious Adegboyega-Loto", role: "Technology Products & Services Client" },
+  {
+    logo: logoServiceLinka,
+    logoDark: false,
+    quote: "Dynamics Technology didn't just build our platform — they understood our vision from day one. Their ideation process surfaced challenges we hadn't even considered, and the solution they architected has scaled effortlessly as ServiceLinka has grown.",
+    name: "ServiceLinka Team",
+    role: "Service Marketplace Platform",
+  },
+  {
+    logo: logoNehi,
+    logoDark: false,
+    quote: "Working with Dynamics Technology transformed how we manage projects and client communication. They delivered a robust, reliable system on time and on budget. For any construction firm looking to modernise operations, these are the people to call.",
+    name: "Nehi Constructs Limited",
+    role: "Construction & Infrastructure",
+  },
+  {
+    logo: logoAcadi,
+    logoDark: false,
+    quote: "As a community-driven organisation, we needed technology that was both accessible and impactful. Dynamics Technology listened carefully and delivered a digital solution that has genuinely strengthened our reach across the diocese.",
+    name: "ACCADI",
+    role: "Anglican Community Development",
+  },
+  {
+    logo: logoThrivehill,
+    logoDark: true,
+    quote: "The team at Dynamics Technology thinks like creatives and executes like engineers. They built our studio's digital infrastructure with precision and flair — exactly the blend a creative brand needs. A truly exceptional partnership.",
+    name: "Thrivehill Studio",
+    role: "Creative & Design Studio",
+  },
 ];
 
 const TestimonialsSection = () => (
@@ -25,18 +55,23 @@ const TestimonialsSection = () => (
         <p className="label-caps text-primary mb-4">Client Voices</p>
       </FadeUp>
       <FadeUp delay={0.1}>
-        <h2 className="heading-lg">What our clients <span className="text-gradient-primary">say</span></h2>
+        <h2 className="heading-lg">What our partners <span className="text-gradient-primary">say</span></h2>
       </FadeUp>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-14">
+      <div className="grid md:grid-cols-2 gap-6 mt-14">
         {testimonials.map((t, i) => (
-          <FadeUp key={t.name} delay={0.15 + i * 0.1}>
-            <div className="glass-card rounded-xl p-8 h-full flex flex-col">
-              <Quote size={24} className="text-primary/30 mb-4" />
+          <FadeUp key={t.name} delay={0.12 + i * 0.1}>
+            <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
+              <Quote size={28} className="text-primary/25 mb-5" />
               <p className="text-muted-foreground text-sm leading-relaxed flex-1">{t.quote}</p>
-              <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-display font-semibold text-sm">{t.name}</p>
-                <p className="text-xs text-muted-foreground mt-1">{t.role}</p>
+              <div className="mt-6 pt-5 border-t border-border flex items-center gap-4">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden ${t.logoDark ? "bg-gray-900 p-1.5" : "bg-gray-50 p-1.5"}`}>
+                  <img src={t.logo} alt={t.name} className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <p className="font-display font-semibold text-sm">{t.name}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
+                </div>
               </div>
             </div>
           </FadeUp>
