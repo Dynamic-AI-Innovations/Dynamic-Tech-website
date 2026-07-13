@@ -1,6 +1,9 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import ProofSection from "@/components/ProofSection";
+import EcosystemSection from "@/components/EcosystemSection";
+import InnovationTimelineSection from "@/components/InnovationTimelineSection";
+import AfricaDashboardSection from "@/components/AfricaDashboardSection";
 import AboutSection from "@/components/AboutSection";
 import CoreServiceSection from "@/components/CoreServiceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -10,6 +13,9 @@ const Index = () => (
   <Layout>
     <HeroSection />
     <ProofSection />
+    <EcosystemSection />
+    <InnovationTimelineSection />
+    <AfricaDashboardSection />
     <AboutSection />
     <CoreServiceSection />
     <TestimonialsSection />

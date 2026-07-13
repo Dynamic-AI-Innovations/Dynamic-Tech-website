@@ -5,19 +5,10 @@ import { Button } from "@/components/ui/button";
 import IdeationModal from "@/components/IdeationModal";
 import HeroBackground from "@/components/HeroBackground";
 
-const pillars = [
-  {
-    num: "01", label: "IDEATE", title: "Innovation Consulting",
-    desc: "The right problem, framed correctly. Research and insight turned into a clear, executable plan.",
-  },
-  {
-    num: "02", label: "ENGINEER", title: "Full-Stack Delivery",
-    desc: "AI, IoT, mobile, web and hardware — engineered to world-class standards, built for African markets.",
-  },
-  {
-    num: "03", label: "TRANSFORM", title: "Strategic Partnership",
-    desc: "We stay, scale, and drive growth alongside you — long after launch.",
-  },
+const headlineLines = [
+  { text: "Ideas become ", accent: "industries." },
+  { text: "Engineering becomes ", accent: "impact." },
+  { text: "Innovation becomes ", accent: "legacy." },
 ];
 
 const HeroSection = () => {
@@ -28,47 +19,72 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
         <HeroBackground />
 
-        <div className="relative z-10 section-padding pt-24 md:pt-32 pb-16 md:pb-20">
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="label-caps text-primary mb-4 md:mb-6">
-            Africa's Innovation & Transformation Consultancy
+        <div className="relative z-10 section-padding pt-24 md:pt-28 pb-16 md:pb-20">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="label-caps text-accent mb-5 md:mb-7"
+          >
+            Building Africa's Silicon Valley
           </motion.p>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }} className="heading-xl max-w-4xl text-white">
-            We Ideate.{" "}
-            <span className="text-gradient-accent">We Engineer.</span>{" "}
-            <span className="text-gradient-primary">We Transform.</span>
-          </motion.h1>
+          <h1 className="heading-hero max-w-5xl text-white">
+            {headlineLines.map((line, i) => (
+              <motion.span
+                key={line.accent}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + i * 0.22, duration: 0.7 }}
+                className="block"
+              >
+                {line.text}
+                <span className="text-gradient-accent">{line.accent}</span>
+              </motion.span>
+            ))}
+          </h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="body-lg text-white/70 max-w-2xl mt-4 md:mt-6">
-            From idea to live product — Africa's leading Innovation & Transformation Consultancy.
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1 }}
+            className="body-lg text-white/70 max-w-2xl mt-6 md:mt-8"
+          >
+            We are not a software company, an agency, or a consultancy. We are the
+            ecosystem where founders launch, governments modernize, industries
+            transform, and research becomes product — engineered from Africa, for the world.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="flex flex-col sm:flex-row gap-3 mt-8 md:mt-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3 }}
+            className="flex flex-col sm:flex-row gap-3 mt-10 md:mt-12"
+          >
             <Button variant="hero" size="lg" className="text-base px-8 py-6 w-full sm:w-auto" onClick={() => setModalOpen(true)}>
-              Start with Ideation <ArrowRight className="ml-1" size={18} />
+              Enter the Ecosystem <ArrowRight className="ml-1" size={18} />
             </Button>
             <Button
               size="lg"
               className="text-base px-8 py-6 w-full sm:w-auto border border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10 transition-all duration-300 font-semibold rounded-md"
-              onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("ecosystem")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Explore Services
+              What We're Building
             </Button>
           </motion.div>
         </div>
 
-        {/* Pillar cards — hidden on mobile to keep hero tight */}
-        <div className="hidden md:block relative z-10 section-padding pb-20">
-          <div className="grid md:grid-cols-3 gap-6">
-            {pillars.map((p, i) => (
-              <motion.div key={p.num} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 + i * 0.15 }} className="rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/15 bg-white/8 backdrop-blur-sm">
-                <p className="label-caps text-primary mb-2">{p.num} / {p.label}</p>
-                <h3 className="font-display font-semibold text-lg mb-2 text-white">{p.title}</h3>
-                <p className="text-sm text-white/60">{p.desc}</p>
-              </motion.div>
-            ))}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.8 }}
+          className="absolute bottom-8 left-0 right-0 z-10 hidden md:flex justify-center"
+        >
+          <div className="flex flex-col items-center gap-2 text-white/40">
+            <span className="label-caps">Scroll</span>
+            <span className="h-8 w-px bg-gradient-to-b from-white/40 to-transparent" />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <IdeationModal open={modalOpen} onOpenChange={setModalOpen} />

@@ -7,11 +7,12 @@ import IdeationModal from "@/components/IdeationModal";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
-  { label: "Home",     to: "/" },
-  { label: "About",    to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Partners", to: "/partners" },
-  { label: "Store",    to: "https://paystack.shop/dynamics-technology-store", external: true },
+  { label: "Home",      to: "/" },
+  { label: "Ecosystem", to: "/#ecosystem" },
+  { label: "About",     to: "/about" },
+  { label: "Services",  to: "/services" },
+  { label: "Partners",  to: "/partners" },
+  { label: "Store",     to: "https://paystack.shop/dynamics-technology-store", external: true },
 ];
 
 const portfolioItems = [
