@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import HeroSection from "@/components/HeroSection";
+import HeroSlider from "@/components/HeroSlider";
 import ProofSection from "@/components/ProofSection";
 import EcosystemSection from "@/components/EcosystemSection";
 import InnovationTimelineSection from "@/components/InnovationTimelineSection";
@@ -11,7 +11,7 @@ import CTASection from "@/components/CTASection";
 
 const Index = () => (
   <Layout>
-    <HeroSection />
+    <HeroSlider />
     <ProofSection />
     <EcosystemSection />
     <InnovationTimelineSection />

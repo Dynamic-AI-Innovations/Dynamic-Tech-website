@@ -1,0 +1,43 @@
+[
+  {
+    "filename": "slide1-innovation.webp",
+    "theme": "Innovation Consultancy",
+    "photographer": "Unknown",
+    "source_platform": "Client-provided",
+    "original_url": null,
+    "license": "Provided directly by Dynamics Technology; original source/license not verified. Confirm rights before any commercial reuse beyond this site.",
+    "notes": "Supplied by the client outside the automated sourcing pipeline; not sourced from Unsplash/Pexels."
+  },
+  {
+    "filename": "slide2-founders.webp",
+    "theme": "Founders Launch",
+    "photographer": "Edmond Dantès",
+    "source_platform": "Pexels",
+    "original_url": "https://www.pexels.com/photo/people-sitting-on-the-armchair-8069112/",
+    "license": "Pexels License — free for commercial and personal use, no attribution required (https://www.pexels.com/license/)"
+  },
+  {
+    "filename": "slide3-governments.webp",
+    "theme": "Governments Modernize",
+    "photographer": "Jimmy Liao",
+    "source_platform": "Pexels",
+    "original_url": "https://www.pexels.com/photo/cityscape-at-night-16827317/",
+    "license": "Pexels License — free for commercial and personal use, no attribution required (https://www.pexels.com/license/)"
+  },
+  {
+    "filename": "slide4-industries.webp",
+    "theme": "Industries Transform",
+    "photographer": "Cemrecan Yurtman",
+    "source_platform": "Pexels",
+    "original_url": "https://www.pexels.com/photo/industrial-laser-cutter-in-operation-inside-factory-29988964/",
+    "license": "Pexels License — free for commercial and personal use, no attribution required (https://www.pexels.com/license/)"
+  },
+  {
+    "filename": "slide5-research.webp",
+    "theme": "Research → Engineering → Products",
+    "photographer": "ThisIsEngineering",
+    "source_platform": "Pexels",
+    "original_url": "https://www.pexels.com/photo/engineers-testing-product-3861949/",
+    "license": "Pexels License — free for commercial and personal use, no attribution required (https://www.pexels.com/license/)"
+  }
+]
