@@ -103,16 +103,16 @@ const ServicesSection = () => (
   <section id="services" className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">What We Build</p>
+        <p className="label-caps text-primary mb-4">The Engineering Behind It</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg max-w-3xl">
-          Extended Service <span className="text-gradient-primary">Portfolio</span>
+          One team. <span className="text-gradient-primary">Every domain.</span>
         </h2>
       </FadeUp>
       <FadeUp delay={0.15}>
         <p className="body-lg text-muted-foreground max-w-2xl mt-4">
-          From strategy through to deployment — across every domain of modern technology.
+          The full engineering stack behind every company, government, and idea we help build.
         </p>
       </FadeUp>
 

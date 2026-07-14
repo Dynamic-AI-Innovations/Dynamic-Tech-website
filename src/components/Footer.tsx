@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Twitter, Linkedin, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.svg";
+import Logo from "@/components/Logo";
 
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/ddynamicstechnology/",                   label: "Instagram" },
@@ -9,31 +9,53 @@ const socials = [
   { icon: Linkedin,  href: "https://www.linkedin.com/company/dynamics-technology/",             label: "LinkedIn"  },
 ];
 
-const footerLinks = [
+const companyLinks = [
   { label: "About",      to: "/about"     },
   { label: "Services",   to: "/services"  },
   { label: "Portfolio",  to: "/portfolio" },
   { label: "Partners",   to: "/partners"  },
 ];
 
+const ecosystemLinks = [
+  { label: "Ecosystem Overview", to: "/#ecosystem" },
+  { label: "Innovation Lab",     to: "/innovation-lab" },
+  { label: "Venture Studio",     to: "/venture-studio" },
+  { label: "Research Institute", to: "/research-institute" },
+];
+
 const Footer = () => (
   <footer className="section-padding py-12 border-t border-border">
     <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-10">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Dynamics Technology" className="h-9 w-auto" />
+          <Logo className="h-9 w-auto" />
         </Link>
 
-        <div className="flex flex-wrap gap-6">
-          {footerLinks.map((l) => (
-            <Link
-              key={l.label}
-              to={l.to}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {l.label}
-            </Link>
-          ))}
+        <div className="grid grid-cols-2 gap-x-10 gap-y-2">
+          <div className="flex flex-col gap-2.5">
+            <p className="label-caps text-muted-foreground mb-1">Company</p>
+            {companyLinks.map((l) => (
+              <Link
+                key={l.label}
+                to={l.to}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-col gap-2.5">
+            <p className="label-caps text-muted-foreground mb-1">Ecosystem</p>
+            {ecosystemLinks.map((l) => (
+              <Link
+                key={l.label}
+                to={l.to}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">

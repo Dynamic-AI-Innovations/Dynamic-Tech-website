@@ -52,10 +52,10 @@ const TestimonialsSection = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">Client Voices</p>
+        <p className="label-caps text-primary mb-4">Ecosystem Voices</p>
       </FadeUp>
       <FadeUp delay={0.1}>
-        <h2 className="heading-lg">What our partners <span className="text-gradient-primary">say</span></h2>
+        <h2 className="heading-lg">What builders in the <span className="text-gradient-primary">ecosystem say.</span></h2>
       </FadeUp>
 
       <div className="grid md:grid-cols-2 gap-6 mt-14">
@@ -66,7 +66,7 @@ const TestimonialsSection = () => (
               <p className="text-muted-foreground text-sm leading-relaxed flex-1">{t.quote}</p>
               <div className="mt-6 pt-5 border-t border-border flex items-center gap-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden ${t.logoDark ? "bg-gray-900 p-1.5" : "bg-gray-50 p-1.5"}`}>
-                  <img src={t.logo} alt={t.name} className="w-full h-full object-contain" />
+                  <img src={t.logo} alt={t.name} loading="lazy" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <p className="font-display font-semibold text-sm">{t.name}</p>

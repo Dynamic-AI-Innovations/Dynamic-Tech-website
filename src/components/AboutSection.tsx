@@ -52,7 +52,7 @@ const AboutSection = () => (
       <div className="mt-14 lg:mt-0 flex flex-col gap-px border border-border rounded-2xl overflow-hidden">
         {pillars.map((p, i) => (
           <FadeUp key={p.title} delay={0.2 + i * 0.1}>
-            <div className="bg-white px-8 py-7 hover:bg-slate-50 transition-colors duration-200">
+            <div className="bg-card px-8 py-7 hover:bg-muted transition-colors duration-200">
               <p className="font-display font-semibold text-foreground mb-1">{p.title}</p>
               <p className="text-sm text-muted-foreground">{p.desc}</p>
             </div>

@@ -3,10 +3,15 @@ import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import PortfolioSection from "@/components/PortfolioSection";
 import CTASection from "@/components/CTASection";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const VALID_TABS = ["rbd", "design", "writing", "tech"];
 
 const PortfolioPage = () => {
+  usePageTitle(
+    "Portfolio — Dynamics Technology",
+    "Research, brand design, content, and software work delivered by Dynamics Technology across Africa's innovation ecosystem."
+  );
   const [searchParams, setSearchParams] = useSearchParams();
   const initialTab = VALID_TABS.includes(searchParams.get("tab") ?? "") ? searchParams.get("tab")! : "rbd";
   const [activeTab, setActiveTab] = useState(initialTab);

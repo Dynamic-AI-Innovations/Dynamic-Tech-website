@@ -24,22 +24,22 @@ const CTASection = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <FadeUp>
-            <p className="label-caps text-primary mb-4">Start the Conversation</p>
+            <p className="label-caps text-primary mb-4">Join the Ecosystem</p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="heading-lg">
-              Ready to <span className="text-gradient-primary">Transform?</span>
+              Ready to <span className="text-gradient-primary">build?</span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="body-lg text-muted-foreground max-w-2xl mx-auto mt-6">
-              The future belongs to organisations that act on their ideas. We want you to be part of what we're building.
+              The future belongs to those who act on their ideas. Come build it with us.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
             <div className="flex flex-wrap justify-center gap-4 mt-10">
               <Button variant="hero" size="lg" className="text-base px-8 py-6" onClick={() => setModalOpen(true)}>
-                Start a Project <ArrowRight className="ml-1" size={18} />
+                Let's Build Together <ArrowRight className="ml-1" size={18} />
               </Button>
               <Button variant="heroOutline" size="lg" className="text-base px-8 py-6" asChild>
                 <a href="tel:+2349112802448">Call Us Now</a>

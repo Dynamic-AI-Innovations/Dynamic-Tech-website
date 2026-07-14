@@ -20,7 +20,7 @@ const visionStats = [
 ];
 
 const VisionSection = () => (
-  <section id="vision" className="section-padding py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+  <section id="vision" className="section-padding py-24 lg:py-32 bg-muted relative overflow-hidden">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
 
     <div className="max-w-6xl mx-auto relative z-10">
@@ -55,6 +55,7 @@ const VisionSection = () => (
             <img
               src={imgCity}
               alt="Africa's growing cities and digital future"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>

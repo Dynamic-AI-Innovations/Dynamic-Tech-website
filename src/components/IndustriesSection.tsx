@@ -82,13 +82,13 @@ const industries = [
 ];
 
 const IndustriesSection = () => (
-  <section className="section-padding py-24 lg:py-32 bg-slate-50">
+  <section className="section-padding py-24 lg:py-32 bg-muted">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
         <p className="label-caps text-primary mb-4">Sectors</p>
       </FadeUp>
       <FadeUp delay={0.1}>
-        <h2 className="heading-lg">Industries We <span className="text-gradient-primary">Serve</span></h2>
+        <h2 className="heading-lg">Industries we're <span className="text-gradient-primary">transforming.</span></h2>
       </FadeUp>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-14">

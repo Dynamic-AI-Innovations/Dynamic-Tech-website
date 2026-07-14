@@ -30,10 +30,10 @@ const EngagementSection = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">How We Work</p>
+        <p className="label-caps text-primary mb-4">How We Build Together</p>
       </FadeUp>
       <FadeUp delay={0.1}>
-        <h2 className="heading-lg">Our Engagement <span className="text-gradient-primary">Model</span></h2>
+        <h2 className="heading-lg">Building <span className="text-gradient-primary">alongside you.</span></h2>
       </FadeUp>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
@@ -45,6 +45,7 @@ const EngagementSection = () => (
                 <img
                   src={s.img}
                   alt={s.title}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Step number overlay on image */}

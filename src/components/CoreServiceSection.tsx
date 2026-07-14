@@ -29,7 +29,7 @@ const steps = [
 ];
 
 const CoreServiceSection = () => (
-  <section id="core-service" className="section-padding py-24 lg:py-32 bg-slate-50">
+  <section id="core-service" className="section-padding py-24 lg:py-32 bg-muted">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
         <p className="label-caps text-accent mb-4">Core Service</p>
@@ -54,6 +54,7 @@ const CoreServiceSection = () => (
                 <img
                   src={s.img}
                   alt={s.title}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

@@ -22,13 +22,13 @@ const reasons = [
 ];
 
 const WhyUsSection = () => (
-  <section id="why-us" className="section-padding py-24 lg:py-32 bg-slate-50">
+  <section id="why-us" className="section-padding py-24 lg:py-32 bg-muted">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">The Dynamics Difference</p>
+        <p className="label-caps text-primary mb-4">The Ecosystem Advantage</p>
       </FadeUp>
       <FadeUp delay={0.1}>
-        <h2 className="heading-lg">Why choose <span className="text-gradient-primary">Dynamics?</span></h2>
+        <h2 className="heading-lg">Why builders choose <span className="text-gradient-primary">this ecosystem.</span></h2>
       </FadeUp>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mt-14">
