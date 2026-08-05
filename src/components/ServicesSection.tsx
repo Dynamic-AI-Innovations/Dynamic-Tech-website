@@ -103,7 +103,7 @@ const ServicesSection = () => (
   <section id="services" className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">The Engineering Behind It</p>
+        <p className="eyebrow text-primary mb-4">The Engineering Behind It</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg max-w-3xl">
@@ -119,7 +119,7 @@ const ServicesSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {services.map((s, i) => (
           <FadeUp key={s.category} delay={0.12 + i * 0.06}>
-            <div className={`glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-lg group relative overflow-hidden ${s.borderHover}`}>
+            <div className={`card-outline p-6 h-full transition-all duration-300 hover:shadow-lg group relative overflow-hidden ${s.borderHover}`}>
               {/* Top accent line on hover */}
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
 

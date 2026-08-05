@@ -24,7 +24,7 @@ const CTASection = () => {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <FadeUp>
-            <p className="label-caps text-primary mb-4">Join the Ecosystem</p>
+            <p className="eyebrow text-primary mb-4">Join the Ecosystem</p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="heading-lg">

@@ -52,7 +52,7 @@ const TestimonialsSection = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">Ecosystem Voices</p>
+        <p className="eyebrow text-primary mb-4">Ecosystem Voices</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg">What builders in the <span className="text-gradient-primary">ecosystem say.</span></h2>
@@ -61,7 +61,7 @@ const TestimonialsSection = () => (
       <div className="grid md:grid-cols-2 gap-6 mt-14">
         {testimonials.map((t, i) => (
           <FadeUp key={t.name} delay={0.12 + i * 0.1}>
-            <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
+            <div className="card-outline p-8 h-full flex flex-col">
               <Quote size={28} className="text-primary/25 mb-5" />
               <p className="text-muted-foreground text-sm leading-relaxed flex-1">{t.quote}</p>
               <div className="mt-6 pt-5 border-t border-border flex items-center gap-4">

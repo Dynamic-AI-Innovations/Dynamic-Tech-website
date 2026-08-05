@@ -30,7 +30,7 @@ const ResearchInstituteSection = () => (
   <>
     <section className="section-padding py-24 lg:py-32">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="label-caps text-primary mb-4">The Research Institute</p>
+        <p className="eyebrow text-primary mb-4">The Research Institute</p>
         <h1 className="heading-lg">
           The evidence behind <span className="text-gradient-primary">every decision.</span>
         </h1>
@@ -43,7 +43,7 @@ const ResearchInstituteSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16 max-w-6xl mx-auto">
         {capabilities.map((c, i) => (
           <FadeUp key={c.title} delay={0.1 + i * 0.08}>
-            <div className="glass-card rounded-2xl p-6 h-full hover:border-primary/30 hover:shadow-md transition-all duration-300">
+            <div className="card-outline p-6 h-full hover:border-primary/30 hover:shadow-md transition-all duration-300">
               <c.icon className="w-7 h-7 text-primary mb-5" />
               <h3 className="font-display font-semibold mb-2">{c.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
@@ -53,9 +53,9 @@ const ResearchInstituteSection = () => (
       </div>
     </section>
 
-    <section className="section-padding py-16 lg:py-20 bg-muted border-y border-border">
+    <section className="section-padding py-16 lg:py-20 bg-surface-warm border-y border-border">
       <div className="max-w-3xl mx-auto text-center">
-        <p className="label-caps text-accent mb-4">Publications</p>
+        <p className="eyebrow text-accent mb-4">Publications</p>
         <h2 className="heading-md">Our first publications are in progress.</h2>
         <p className="body-lg text-muted-foreground mt-4">
           The Institute is newly formed — whitepapers and reports will be published here as they're completed.

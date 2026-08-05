@@ -18,7 +18,7 @@ const InnovationTimelineSection = () => {
     <section className="section-padding py-24 lg:py-32 bg-background border-b border-border">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl">
-          <p className="label-caps text-primary mb-4">How It Happens</p>
+          <p className="eyebrow text-primary mb-4">How It Happens</p>
           <h2 className="heading-lg">
             From <span className="text-gradient-primary">research</span> to a{" "}
             <span className="text-gradient-accent">global product.</span>

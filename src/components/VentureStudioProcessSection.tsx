@@ -30,7 +30,7 @@ const VentureStudioProcessSection = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <div className="max-w-2xl">
-        <p className="label-caps text-primary mb-4">The Venture Studio</p>
+        <p className="eyebrow text-primary mb-4">The Venture Studio</p>
         <h1 className="heading-lg">
           You bring the founder. <span className="text-gradient-primary">We bring everything else.</span>
         </h1>
@@ -43,7 +43,7 @@ const VentureStudioProcessSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-14">
         {stages.map((s, i) => (
           <FadeUp key={s.title} delay={0.1 + i * 0.08}>
-            <div className="glass-card rounded-2xl p-6 h-full hover:border-primary/30 hover:shadow-md transition-all duration-300">
+            <div className="card-outline p-6 h-full hover:border-primary/30 hover:shadow-md transition-all duration-300">
               <s.icon className="w-7 h-7 text-primary mb-5" />
               <h3 className="font-display font-semibold mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.youGet}</p>

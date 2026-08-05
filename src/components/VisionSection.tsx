@@ -20,7 +20,7 @@ const visionStats = [
 ];
 
 const VisionSection = () => (
-  <section id="vision" className="section-padding py-24 lg:py-32 bg-muted relative overflow-hidden">
+  <section id="vision" className="section-padding py-24 lg:py-32 bg-surface-warm relative overflow-hidden">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
 
     <div className="max-w-6xl mx-auto relative z-10">
@@ -28,7 +28,7 @@ const VisionSection = () => (
       <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center mb-16">
         <div>
           <FadeUp>
-            <p className="label-caps text-primary mb-4">Our North Star</p>
+            <p className="eyebrow text-primary mb-4">Our North Star</p>
           </FadeUp>
           <FadeUp delay={0.1}>
             <h2 className="heading-lg max-w-3xl">
@@ -66,7 +66,7 @@ const VisionSection = () => (
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {visionStats.map((s, i) => (
           <FadeUp key={s.value} delay={0.3 + i * 0.1}>
-            <div className="glass-card rounded-xl p-6 text-center">
+            <div className="card-outline p-6 text-center">
               <p className="font-display text-3xl md:text-4xl font-bold text-gradient-accent">{s.value}</p>
               <p className="text-sm text-muted-foreground mt-3">{s.desc}</p>
             </div>

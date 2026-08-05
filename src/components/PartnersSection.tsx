@@ -43,7 +43,7 @@ const PartnerCard = ({ p, delay }: { p: typeof partners[number]; delay: number }
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-60px" }}
     transition={{ duration: 0.5, delay }}
-    className="glass-card rounded-2xl p-5 flex flex-col items-center justify-center gap-3 text-center h-36 hover:border-primary/40 hover:shadow-md transition-all duration-300 group"
+    className="card-outline p-5 flex flex-col items-center justify-center gap-3 text-center h-36 hover:border-primary/40 hover:shadow-md transition-all duration-300 group"
   >
     {p.logo ? (
       <img
@@ -67,7 +67,7 @@ const PartnersSection = () => (
   <section id="partners" className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">Ecosystem</p>
+        <p className="eyebrow text-primary mb-4">Ecosystem</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg">Our Trusted <span className="text-gradient-primary">Partners</span></h2>

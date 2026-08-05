@@ -116,7 +116,7 @@ const PortfolioSection = ({ activeTab, onTabChange }: PortfolioSectionProps) => 
   <section id="portfolio" className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">Our Work</p>
+        <p className="eyebrow text-primary mb-4">Our Work</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg max-w-3xl">
@@ -151,7 +151,7 @@ const PortfolioSection = ({ activeTab, onTabChange }: PortfolioSectionProps) => 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {portfolioData[tab.id as keyof typeof portfolioData].map((item, i) => (
                   <FadeUp key={item.title} delay={i * 0.08}>
-                    <div className="glass-card rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
+                    <div className="card-outline overflow-hidden hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
                       <div className="h-44 w-full flex-shrink-0" style={{ background: item.gradient }} />
                       <div className="p-6 flex flex-col flex-1">
                         <span className="label-caps text-primary/70 mb-2 block">{item.tag}</span>

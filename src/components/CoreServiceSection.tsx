@@ -29,10 +29,10 @@ const steps = [
 ];
 
 const CoreServiceSection = () => (
-  <section id="core-service" className="section-padding py-24 lg:py-32 bg-muted">
+  <section id="core-service" className="section-padding py-24 lg:py-32 bg-surface-warm">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-accent mb-4">Core Service</p>
+        <p className="eyebrow text-accent mb-4">Core Service</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg max-w-3xl">
@@ -48,7 +48,7 @@ const CoreServiceSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {steps.map((s, i) => (
           <FadeUp key={s.num} delay={0.2 + i * 0.08}>
-            <div className="glass-card rounded-xl overflow-hidden h-full hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+            <div className="card-outline overflow-hidden h-full hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
               {/* Image header */}
               <div className="h-32 md:h-40 w-full overflow-hidden">
                 <img

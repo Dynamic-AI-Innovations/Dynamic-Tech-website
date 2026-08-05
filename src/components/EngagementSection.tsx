@@ -30,7 +30,7 @@ const EngagementSection = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-6xl mx-auto">
       <FadeUp>
-        <p className="label-caps text-primary mb-4">How We Build Together</p>
+        <p className="eyebrow text-primary mb-4">How We Build Together</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h2 className="heading-lg">Building <span className="text-gradient-primary">alongside you.</span></h2>
@@ -39,7 +39,7 @@ const EngagementSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {steps.map((s, i) => (
           <FadeUp key={s.num} delay={0.15 + i * 0.08}>
-            <div className="glass-card rounded-xl overflow-hidden h-full hover:border-primary/30 hover:shadow-md transition-all duration-300 group">
+            <div className="card-outline overflow-hidden h-full hover:border-primary/30 hover:shadow-md transition-all duration-300 group">
               {/* Image header */}
               <div className="h-32 md:h-40 w-full overflow-hidden relative">
                 <img

@@ -43,6 +43,9 @@
 
     --ink: 234 62% 8%;
 
+    /* Warm cream — alternate light-section surface, softer than stark white */
+    --surface-warm: 42 38% 96%;
+
     --hero-gradient: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(220 25% 96%) 50%, hsl(225 30% 95%) 100%);
     --glow-primary: 0 0 40px hsl(240 100% 25% / 0.10);
     --glow-accent: 0 0 40px hsl(43 74% 49% / 0.10);
@@ -76,6 +79,8 @@
     --primary-foreground: 234 60% 10%;
 
     --secondary-navy: 230 70% 58%;
+
+    --surface-warm: 234 42% 11%;
 
     --secondary: 234 28% 16%;
     --secondary-foreground: 210 20% 92%;
@@ -160,6 +165,14 @@
     border: 1px solid hsl(0 0% 100% / 0.12);
   }
 
+  .card-outline {
+    @apply bg-card border border-border rounded-2xl;
+  }
+
+  .bg-surface-warm {
+    background-color: hsl(var(--surface-warm));
+  }
+
   .glow-primary {
     box-shadow: var(--glow-primary);
   }
@@ -194,5 +207,18 @@
 
   .label-caps {
     @apply text-xs md:text-sm font-medium tracking-[0.2em] uppercase;
+  }
+
+  .eyebrow {
+    @apply label-caps inline-flex items-center gap-2.5;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    flex-shrink: 0;
+    background: currentColor;
+    opacity: 0.7;
   }
 }

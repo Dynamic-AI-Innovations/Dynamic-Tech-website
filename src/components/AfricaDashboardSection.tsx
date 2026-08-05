@@ -43,7 +43,7 @@ const AfricaDashboardSection = () => {
 
       <div className="max-w-6xl mx-auto relative">
         <div className="max-w-2xl">
-          <p className="label-caps text-accent mb-4">The Africa Dashboard</p>
+          <p className="eyebrow text-accent mb-4">The Africa Dashboard</p>
           <h2 className="heading-lg text-white">
             The ecosystem, <span className="text-gradient-accent">at scale.</span>
           </h2>

@@ -28,7 +28,7 @@ const AboutSection = () => (
     <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-2 lg:gap-20 lg:items-start">
       <div>
         <FadeUp>
-          <p className="label-caps text-primary mb-4">Who We Are</p>
+          <p className="eyebrow text-primary mb-4">Who We Are</p>
         </FadeUp>
         <FadeUp delay={0.1}>
           <h2 className="heading-lg">

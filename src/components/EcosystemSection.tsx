@@ -48,7 +48,7 @@ const EcosystemSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="max-w-2xl">
         <FadeUp>
-          <p className="label-caps text-accent mb-4">The Ecosystem</p>
+          <p className="eyebrow text-accent mb-4">The Ecosystem</p>
         </FadeUp>
         <FadeUp delay={0.1}>
           <h2 className="heading-lg text-white">

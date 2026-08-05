@@ -21,7 +21,7 @@ const InnovationLabHero = () => (
   <section className="section-padding py-24 lg:py-32">
     <div className="max-w-4xl mx-auto text-center">
       <FadeUp>
-        <p className="label-caps text-accent mb-4">The Innovation Lab</p>
+        <p className="eyebrow text-accent mb-4">The Innovation Lab</p>
       </FadeUp>
       <FadeUp delay={0.1}>
         <h1 className="heading-lg">
@@ -39,7 +39,7 @@ const InnovationLabHero = () => (
     <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto mt-16">
       {stages.map((s, i) => (
         <FadeUp key={s.label} delay={0.3 + i * 0.1}>
-          <div className="glass-card rounded-2xl p-6 h-full">
+          <div className="card-outline p-6 h-full">
             <p className="label-caps text-accent/70 mb-2">0{i + 1}</p>
             <h3 className="font-display font-semibold mb-2">{s.label}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>

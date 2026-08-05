@@ -44,7 +44,7 @@ const ProofSection = () => {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section className="border-b border-border bg-background">
+    <section className="border-b border-border bg-surface-warm">
       {/* Metrics row */}
       <div ref={ref} className="section-padding py-10 border-b border-border">
         <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4">
@@ -74,7 +74,7 @@ const ProofSection = () => {
 
       {/* Partner logo strip */}
       <div className="py-6">
-        <p className="label-caps text-muted-foreground text-center mb-5">Trusted by</p>
+        <p className="eyebrow text-muted-foreground justify-center mb-5">Trusted by</p>
         <div className="overflow-hidden" style={edgeFade}>
           <div className="flex items-center animate-marquee" style={{ animationDuration: "48s" }}>
             {[...partners, ...partners].map((p, i) => (

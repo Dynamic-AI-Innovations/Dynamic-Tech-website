@@ -98,7 +98,7 @@ const HeroSlider = () => {
                       transition={{ duration: 0.6, delay: 0.25 }}
                       className="max-w-3xl"
                     >
-                      <p className="label-caps text-accent mb-5 md:mb-7">{slide.eyebrow}</p>
+                      <p className="eyebrow text-accent mb-5 md:mb-7">{slide.eyebrow}</p>
                       <h1 className="heading-hero text-white">
                         {slide.headlinePrefix}
                         <span className="text-gradient-accent">{slide.headlineAccent}</span>

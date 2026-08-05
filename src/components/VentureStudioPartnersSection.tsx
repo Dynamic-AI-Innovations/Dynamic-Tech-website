@@ -27,10 +27,10 @@ const VentureStudioPartnersSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="section-padding py-24 lg:py-32 bg-muted">
+    <section ref={ref} className="section-padding py-24 lg:py-32 bg-surface-warm">
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
-          <p className="label-caps text-primary mb-4">Built With The Studio</p>
+          <p className="eyebrow text-primary mb-4">Built With The Studio</p>
           <h2 className="heading-lg max-w-2xl">
             Organisations we've <span className="text-gradient-primary">built with.</span>
           </h2>

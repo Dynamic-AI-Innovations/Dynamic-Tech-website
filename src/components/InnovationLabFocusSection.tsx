@@ -27,11 +27,11 @@ const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 };
 
 const InnovationLabFocusSection = () => (
-  <section className="section-padding py-24 lg:py-32 bg-muted">
+  <section className="section-padding py-24 lg:py-32 bg-surface-warm">
     <div className="max-w-6xl mx-auto">
       <div className="max-w-2xl">
         <FadeUp>
-          <p className="label-caps text-primary mb-4">Current Exploration</p>
+          <p className="eyebrow text-primary mb-4">Current Exploration</p>
         </FadeUp>
         <FadeUp delay={0.1}>
           <h2 className="heading-lg">
@@ -49,7 +49,7 @@ const InnovationLabFocusSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
         {focusAreas.map((f, i) => (
           <FadeUp key={f.title} delay={0.15 + i * 0.08}>
-            <div className="glass-card rounded-2xl p-6 h-full hover:border-accent/30 hover:shadow-md transition-all duration-300">
+            <div className="card-outline p-6 h-full hover:border-accent/30 hover:shadow-md transition-all duration-300">
               <f.icon className="w-7 h-7 text-accent mb-5" />
               <h3 className="font-display font-semibold mb-2">{f.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
