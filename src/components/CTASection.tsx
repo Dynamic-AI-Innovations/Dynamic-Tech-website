@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Phone, Mail, Globe } from "lucide-react";
+import { ArrowRight, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import IdeationModal from "@/components/IdeationModal";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const FadeUp = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
   const ref = useRef(null);
@@ -49,8 +50,13 @@ const CTASection = () => {
 
           <FadeUp delay={0.4}>
             <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm text-muted-foreground">
-              <a href="tel:+2349112802448" className="flex items-center gap-2 hover:text-foreground transition-colors">
-                <Phone size={14} /> +234 911 280 2448
+              <a
+                href="https://wa.me/+2349112802448"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <WhatsAppIcon size={14} /> +234 911 280 2448
               </a>
               <a href="mailto:ddynamictech@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
                 <Mail size={14} /> ddynamictech@gmail.com

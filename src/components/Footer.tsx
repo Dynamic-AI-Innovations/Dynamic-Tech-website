@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Twitter, Linkedin, Phone, Mail } from "lucide-react";
+import { Instagram, Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import Logo from "@/components/Logo";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const socials = [
   { icon: Instagram, href: "https://www.instagram.com/ddynamicstechnology/",                   label: "Instagram" },
@@ -59,8 +60,13 @@ const Footer = () => (
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-          <a href="tel:+2349112802448" className="flex items-center gap-2 hover:text-foreground transition-colors">
-            <Phone size={13} /> +234 911 280 2448
+          <a
+            href="https://wa.me/+2349112802448"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
+          >
+            <WhatsAppIcon size={13} /> +234 911 280 2448
           </a>
           <a href="mailto:ddynamictech@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
             <Mail size={13} /> ddynamictech@gmail.com
