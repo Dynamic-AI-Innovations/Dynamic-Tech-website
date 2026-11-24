@@ -12,7 +12,7 @@ const navLinks = [
   { label: "About",    to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Partners", to: "/partners" },
-  { label: "Store",    to: "https://swapconnect.africa/store/dynamic-tech-5", external: true },
+  { label: "Store",    to: "https://swapconnect.africa/store/dynamic-tech", external: true },
 ];
 
 const ecosystemItems = [
